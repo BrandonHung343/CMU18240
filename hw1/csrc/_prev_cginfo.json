@@ -1,0 +1,78 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 29004,
+                "mod": "std",
+                "archive": "archive.41/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "system": {
+            "gdAaG_d": {
+                "mode": 4,
+                "bytes": 11396,
+                "mod": "system",
+                "out": "gdAaG_d.o",
+                "archive": "archive.41/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 7328,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.41/_17750_archive_1.a"
+            }
+        }
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58933
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "system": [
+            "system",
+            "gdAaG",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER..."
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "Misc": {
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw1/simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw1",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw1/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.41"
+    },
+    "CompileProcesses": [
+        "cgproc.17750.json"
+    ],
+    "stat": {
+        "nMops": 0
+    },
+    "CompileStatus": "Successful"
+}

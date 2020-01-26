@@ -1,0 +1,41 @@
+{
+    "Modules": {
+        "std": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        },
+        "...MASTER...": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "archive": "archive.3/_35510_archive_1.a",
+            "out": "amcQw_d.o",
+            "bytes": 7336
+        },
+        "reYIK_d": {
+            "mode": 4,
+            "mod": "std",
+            "archive": "archive.3/_35510_archive_1.a",
+            "out": "reYIK_d.o",
+            "bytes": 29004
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.3/_35510_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "reYIK_d.o",
+                    29004
+                ]
+            ],
+            "size": 36340
+        }
+    ]
+}

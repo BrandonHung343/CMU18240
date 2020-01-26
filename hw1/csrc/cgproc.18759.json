@@ -1,0 +1,42 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.42/_18759_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7328
+                ],
+                [
+                    "gdAaG_d.o",
+                    11845
+                ]
+            ],
+            "size": 19173
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "system": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "out": "amcQw_d.o",
+            "mod": "...MASTER...",
+            "archive": "archive.42/_18759_archive_1.a",
+            "bytes": 7328,
+            "mode": 4
+        },
+        "gdAaG_d": {
+            "out": "gdAaG_d.o",
+            "mod": "system",
+            "archive": "archive.42/_18759_archive_1.a",
+            "bytes": 11845,
+            "mode": 4
+        }
+    }
+}

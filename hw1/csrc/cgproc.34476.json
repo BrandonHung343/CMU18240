@@ -1,0 +1,27 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7328,
+            "mode": 4,
+            "archive": "archive.2/_34476_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_34476_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7328
+                ]
+            ],
+            "size": 7328
+        }
+    ]
+}
