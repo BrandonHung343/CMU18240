@@ -4,7 +4,8 @@ module hw1prob7
   (input logic a, b, c, d,
    output logic prime, div3);
 
-  logic p1, p2, p3, p4, t1, t2, t3, t4, t5, t6, a_not, b_not, c_not, d_not;
+  logic p1, p2, p3, p4, t1, t2, t3, t4, 
+        t5, t6, a_not, b_not, c_not, d_not;
 
   not (a_not, a),
       (b_not, b),

@@ -43,7 +43,9 @@ endmodule: hw1prob7_test
  
 module system();
   logic a_in, b_in, c_in, d_in, p_out, div_out;
-  hw1prob7 INST (.a(a_in), .b(b_in), .c(c_in), .d(d_in), .prime(p_out), .div3(div_out));
-  hw1prob7_test (.a(a_in), .b(b_in), .c(c_in), .d(d_in), .prime(p_out), .div3(div_out));
+  hw1prob7 INST (.a(a_in), .b(b_in), .c(c_in), .d(d_in),
+                 .prime(p_out), .div3(div_out));
+  hw1prob7_test (.a(a_in), .b(b_in), .c(c_in), .d(d_in), 
+                 .prime(p_out), .div3(div_out));
 endmodule: system
     

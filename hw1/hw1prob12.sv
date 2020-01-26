@@ -29,8 +29,9 @@ module circTester
 
    initial begin
      $monitor($time,, 
-              "a = %b, b = %b, c = %b, loc1 = %b loc0 = %b, dir1 = %b, dir0 = %b",
-             a, b, c, loc1, loc0, dir1, dir0);
+              "a = %b, b = %b, c = %b, loc1 = %b, \
+               loc0 = %b, dir1 = %b, dir0 = %b",
+               a, b, c, loc1, loc0, dir1, dir0);
      for (int i = 0; i < 32; i = i + 1) begin
        {a, b, c, loc1, loc0} = i;
        #10;
@@ -40,6 +41,8 @@ endmodule: circTester
 
 module system();
   logic a_in, b_in, c_in, l1_in, l0_in, d1_out, d0_out;
-  hw1prob12 INST (.a(a_in), .b(b_in), .c(c_in), .loc1(l1_in), .loc0(l0_in), .dir1(d1_out), .dir0(d0_out));
-  circTester MEEP (.a(a_in), .b(b_in), .c(c_in), .loc1(l1_in), .loc0(l0_in), .dir1(d1_out), .dir0(d0_out));
+  hw1prob12 INST (.a(a_in), .b(b_in), .c(c_in), .loc1(l1_in), 
+                  .loc0(l0_in), .dir1(d1_out), .dir0(d0_out));
+  circTester MEEP (.a(a_in), .b(b_in), .c(c_in), .loc1(l1_in), 
+                   .loc0(l0_in), .dir1(d1_out), .dir0(d0_out));
 endmodule: system

@@ -17,8 +17,9 @@ module testTable
 
    initial begin
    $monitor($time,,
-            "a = %b, b = %b, c = %b, b_not = %b, f1 = %b, f2 = %b, f3 = %b, f = %b",
-            a, b, c, b_not, f1, f2, f3, f);
+            "a = %b, b = %b, c = %b, b_not = %b, \
+             f1 = %b, f2 = %b, f3 = %b, f = %b",
+             a, b, c, b_not, f1, f2, f3, f);
    a = 1;
    b = 1;
    c = 0;
