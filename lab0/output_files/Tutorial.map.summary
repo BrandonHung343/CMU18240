@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jan 23 20:22:28 2020
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : Tutorial
+Top-level Entity Name : Tutorial
+Family : Cyclone IV E
+Total logic elements : 1
+    Total combinational functions : 1
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

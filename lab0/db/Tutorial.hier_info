@@ -1,0 +1,8 @@
+|Tutorial
+f <= g1.DB_MAX_OUTPUT_PORT_TYPE
+a => g2.IN0
+b => g2.IN1
+c => g3.IN0
+d => g3.IN1
+
+

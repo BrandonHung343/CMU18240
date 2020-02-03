@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, /afs/ece.cmu.edu/usr/bhung/Private/lab0/Tutorial.sv
+source_file = 1, /afs/ece.cmu.edu/usr/bhung/Private/lab0/db/Tutorial.cbx.xml
+design_name = Tutorial
+instance = comp, \f~output\, f~output, Tutorial, 1
+instance = comp, \c~input\, c~input, Tutorial, 1
+instance = comp, \b~input\, b~input, Tutorial, 1
+instance = comp, \d~input\, d~input, Tutorial, 1
+instance = comp, \a~input\, a~input, Tutorial, 1

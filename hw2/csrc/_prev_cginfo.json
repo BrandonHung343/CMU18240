@@ -1,0 +1,84 @@
+{
+    "MlibObjs": {},
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "hw2prob7_test": {
+            "qY1Yp_d": {
+                "bytes": 12767,
+                "mod": "hw2prob7_test",
+                "archive": "archive.8/_prev_archive_1.a",
+                "out": "qY1Yp_d.o",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o",
+                "archive": "archive.8/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8846,
+                "mod": "...MASTER...",
+                "archive": "archive.8/_224466_archive_1.a",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw2",
+        "csrc": "csrc",
+        "archive_dir": "archive.8",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw2/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw2/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "PEModules": [],
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "hw2prob7_test": [
+            "hw2prob7_test",
+            "qY1Yp",
+            "module"
+        ],
+        "system": [
+            "system",
+            "gdAaG",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "system"
+    ],
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60136
+    },
+    "CompileProcesses": [
+        "cgproc.224466.json"
+    ],
+    "stat": {
+        "nMops": 1895
+    },
+    "CompileStatus": "Successful"
+}

@@ -1,0 +1,43 @@
+{
+    "Modules": {
+        "hw2prob7_test": {},
+        "...MASTER...": {},
+        "std": {},
+        "system": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7987,
+            "mode": 4,
+            "archive": "archive.9/_225728_archive_1.a"
+        },
+        "gdAaG_d": {
+            "mod": "system",
+            "out": "gdAaG_d.o",
+            "bytes": 25390,
+            "mode": 4,
+            "archive": "archive.9/_225728_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 33377,
+            "archive": "archive.9/_225728_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7987
+                ],
+                [
+                    "gdAaG_d.o",
+                    25390
+                ]
+            ]
+        }
+    ]
+}

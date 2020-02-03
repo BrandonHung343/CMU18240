@@ -4,7 +4,7 @@ module hw1prob10
   (input logic a, b,
    output logic f);
 
-   nand #4 (f, a, b);
+   nand #2 (f, a, b);
 
 endmodule
 
@@ -18,10 +18,10 @@ module testNand
             a, b, f);
   a = 0;
   b = 0;
-  #2
+  #1
   a = 1;
   b = 1;
-  #2
+  #1
   a = 0;
   b = 0;
   end

@@ -1,0 +1,50 @@
+{
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab0",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab0/csrc",
+        "csrc": "csrc",
+        "archive_dir": "archive.0",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab0/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "system"
+    ],
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "system": [
+            "system",
+            "gdAaG",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58562
+    },
+    "CompileProcesses": [
+        "cgproc.18390.json"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "stat": {
+        "nMops": 493
+    },
+    "CompileStatus": "Successful"
+}

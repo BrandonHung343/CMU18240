@@ -1,0 +1,75 @@
+       "hw2prob7.sv", line 73, for system.j, at time     5.
+                   5 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 0, y1if = 0, y0if = 0, validIf = 0
+       Case: y2case = 0, y1case = 0,y0case = 0, validCase = 1
+       Tern: y2tern = 0, y1tern = 0, y0tern = 0, validTern = 0
+                  10 a7 = 1, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 1, y0if = 1, validIf = 1
+       Case: y2case = 1, y1case = 1,y0case = 1, validCase = 1
+       Tern: y2tern = 1, y1tern = 1, y0tern = 1, validTern = 1
+                  15 a7 = 1, a6 = 0, a5 = 0, a4 = 0, a3 = 1, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 1, y0if = 1, validIf = 1
+       Case: y2case = 1, y1case = 1,y0case = 1, validCase = 1
+       Tern: y2tern = 1, y1tern = 1, y0tern = 1, validTern = 1
+                  20 a7 = 0, a6 = 1, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 1, y0if = 0, validIf = 1
+       Case: y2case = 1, y1case = 1,y0case = 0, validCase = 1
+       Tern: y2tern = 1, y1tern = 1, y0tern = 0, validTern = 1
+                  25 a7 = 0, a6 = 1, a5 = 1, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 1, y0if = 0, validIf = 1
+       Case: y2case = 1, y1case = 1,y0case = 0, validCase = 1
+       Tern: y2tern = 1, y1tern = 1, y0tern = 0, validTern = 1
+                  30 a7 = 0, a6 = 0, a5 = 1, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 0, y0if = 1, validIf = 1
+       Case: y2case = 1, y1case = 0,y0case = 1, validCase = 1
+       Tern: y2tern = 1, y1tern = 0, y0tern = 1, validTern = 1
+                  35 a7 = 0, a6 = 0, a5 = 1, a4 = 1, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 0, y0if = 1, validIf = 1
+       Case: y2case = 1, y1case = 0,y0case = 1, validCase = 1
+       Tern: y2tern = 1, y1tern = 0, y0tern = 1, validTern = 1
+                  40 a7 = 0, a6 = 0, a5 = 0, a4 = 1, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 0, y0if = 0, validIf = 1
+       Case: y2case = 1, y1case = 0,y0case = 0, validCase = 1
+       Tern: y2tern = 1, y1tern = 0, y0tern = 0, validTern = 1
+                  45 a7 = 0, a6 = 0, a5 = 0, a4 = 1, a3 = 1, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 1, y1if = 0, y0if = 0, validIf = 1
+       Case: y2case = 1, y1case = 0,y0case = 0, validCase = 1
+       Tern: y2tern = 1, y1tern = 0, y0tern = 0, validTern = 1
+                  50 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 1, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 0, y1if = 1, y0if = 1, validIf = 1
+       Case: y2case = 0, y1case = 1,y0case = 1, validCase = 1
+       Tern: y2tern = 0, y1tern = 1, y0tern = 1, validTern = 1
+                  55 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 1, a2 = 1, a1 = 0, a0 = 0
+       If: y2if = 0, y1if = 1, y0if = 1, validIf = 1
+       Case: y2case = 0, y1case = 1,y0case = 1, validCase = 1
+       Tern: y2tern = 0, y1tern = 1, y0tern = 1, validTern = 1
+                  60 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 1, a1 = 0, a0 = 0
+       If: y2if = 0, y1if = 1, y0if = 0, validIf = 1
+       Case: y2case = 0, y1case = 1,y0case = 0, validCase = 1
+       Tern: y2tern = 0, y1tern = 1, y0tern = 0, validTern = 1
+                  65 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 1, a1 = 1, a0 = 0
+       If: y2if = 0, y1if = 1, y0if = 0, validIf = 1
+       Case: y2case = 0, y1case = 1,y0case = 0, validCase = 1
+       Tern: y2tern = 0, y1tern = 1, y0tern = 0, validTern = 1
+                  70 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 1, a0 = 0
+       If: y2if = 0, y1if = 0, y0if = 1, validIf = 1
+       Case: y2case = 0, y1case = 0,y0case = 1, validCase = 1
+       Tern: y2tern = 0, y1tern = 0, y0tern = 1, validTern = 1
+                  75 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 1, a0 = 1
+       If: y2if = 0, y1if = 0, y0if = 1, validIf = 1
+       Case: y2case = 0, y1case = 0,y0case = 1, validCase = 1
+       Tern: y2tern = 0, y1tern = 0, y0tern = 1, validTern = 1
+                  80 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 1
+       If: y2if = 0, y1if = 0, y0if = 0, validIf = 0
+       Case: y2case = 0, y1case = 0,y0case = 0, validCase = 1
+       Tern: y2tern = 0, y1tern = 0, y0tern = 0, validTern = 1
+RT Warning: No condition matches in 'unique case' statement.
+        "hw2prob7.sv", line 73, for system.j, at time    85.
+                  85 a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0
+       If: y2if = 0, y1if = 0, y0if = 0, validIf = 0
+       Case: y2case = 0, y1case = 0,y0case = 0, validCase = 1
+       Tern: y2tern = 0, y1tern = 0, y0tern = 0, validTern = 0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 85
+CPU Time:      0.180 seconds;       Data structure size:   0.0Mb
+Sun Feb  2 20:54:27 2020

@@ -1,0 +1,93 @@
+{
+    "MlibObjs": {},
+    "Misc": {
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw2/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw2",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw2/simv.daidir",
+        "archive_dir": "archive.9"
+    },
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7987,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.9/_225728_archive_1.a"
+            }
+        },
+        "hw2prob7_test": {
+            "qY1Yp_d": {
+                "bytes": 12767,
+                "mod": "hw2prob7_test",
+                "mode": 4,
+                "archive": "archive.9/_prev_archive_1.a",
+                "out": "qY1Yp_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.9/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "system": {
+            "gdAaG_d": {
+                "bytes": 25250,
+                "mod": "system",
+                "out": "gdAaG_d.o",
+                "mode": 4,
+                "archive": "archive.9/_225728_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "hw2prob7_test": [
+            "hw2prob7_test",
+            "qY1Yp",
+            "module"
+        ],
+        "system": [
+            "system",
+            "gdAaG",
+            "module"
+        ]
+    },
+    "PEModules": [],
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60790
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "system"
+    ],
+    "stat": {
+        "nMops": 1907
+    },
+    "CompileProcesses": [
+        "cgproc.225728.json"
+    ],
+    "CompileStatus": "Successful"
+}
