@@ -4,9 +4,9 @@ module system ();
   logic clock, Input, reset_n;
   logic out1, out2;
 
-  hw5prob3_test (.clock, .Input, .reset_n)
-  hw5prob1 a (.Prob1(out1), .clock, .Input, .reset_n)
-  hw5prob2 b (.Prob2(out2), .clock, .Input, .reset_n)
+  hw5prob3_test test (.clock, .Input, .reset_n);
+  hw5prob1 a (.Prob1(out1), .clock, .Input, .reset_n);
+  hw5prob2 b (.Prob2(out2), .clock, .Input, .reset_n);
 endmodule: system
 
 module hw5prob3_test

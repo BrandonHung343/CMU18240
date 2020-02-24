@@ -1,0 +1,24 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
+gui_list_select -id Data.1 -selected  { system.clock   }
+gui_list_select_all -id Data.1
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { system.clock system.Input system.reset_n system.out1 system.out2 } -insertionbar
+gui_sim_continue  
+gui_close_window -window TopLevel.2
+gui_src_highlight_item -id Source.1 -lfrom 7 -idxfrom 2 -fileIdFrom 0 -lto 7 -idxto 15 -fileIdTo 0 -selection {hw5prob3_test} -selectionId 0 -replace 0
+gui_sim_restart
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Source.1 { system } -insertionbar
+gui_sim_continue  

@@ -1,36 +1,8 @@
 {
     "MlibObjs": {},
-    "PEModules": [],
-    "PrevCompiledModules": {
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "archive": "archive.2/_prev_archive_1.a",
-                "mod": "std",
-                "mode": 4,
-                "out": "reYIK_d.o"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 7708,
-                "archive": "archive.2/_52720_archive_1.a",
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "mode": 4
-            }
-        }
-    },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 57094
-    },
-    "CurCompileModules": [
-        "...MASTER...",
-        "hw5prob2"
-    ],
-    "LVLData": [
-        "SIM"
+    "CurCompileUdps": {},
+    "CompileProcesses": [
+        "cgproc.56455.json"
     ],
     "NameTable": {
         "std": [
@@ -38,33 +10,71 @@
             "reYIK",
             "module"
         ],
-        "hw5prob2": [
-            "hw5prob2",
-            "YDHIi",
-            "module"
-        ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
+        ],
+        "system": [
+            "system",
+            "gdAaG",
+            "module"
         ]
     },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 90533
+    },
+    "PEModules": [],
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.4/_56455_archive_1.a",
+                "mode": 4,
+                "mod": "std",
+                "bytes": 29004,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.4/_56455_archive_1.a",
+                "mode": 4,
+                "mod": "...MASTER...",
+                "bytes": 7328,
+                "out": "amcQw_d.o"
+            }
+        },
+        "system": {
+            "gdAaG_d": {
+                "archive": "archive.4/_56455_archive_1.a",
+                "mode": 4,
+                "mod": "system",
+                "bytes": 14337,
+                "out": "gdAaG_d.o"
+            }
+        }
+    },
     "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "CompileProcesses": [
-        "cgproc.52720.json"
+    "LVLData": [
+        "SIM"
+    ],
+    "stat": {
+        "nMops": 1198
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "system"
     ],
     "Misc": {
-        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw5/simv.daidir",
         "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw5",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw5/csrc",
         "csrc": "csrc",
+        "default_output_dir": "csrc",
         "daidir": "simv.daidir",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw5/simv.daidir",
-        "archive_dir": "archive.2"
-    },
-    "stat": {
-        "nMops": 298
+        "archive_dir": "archive.4"
     },
     "CompileStatus": "Successful"
 }
