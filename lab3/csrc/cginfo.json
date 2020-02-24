@@ -1,0 +1,93 @@
+{
+    "LVLData": [
+        "SIM"
+    ],
+    "MlibObjs": {},
+    "stat": {
+        "nMops": 922
+    },
+    "PrevCompiledModules": {
+        "test_change": {
+            "wse6d_d": {
+                "bytes": 20279,
+                "out": "wse6d_d.o",
+                "mod": "test_change",
+                "mode": 4,
+                "archive": "archive.23/_16151_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7336,
+                "out": "amcQw_d.o",
+                "mod": "...MASTER...",
+                "mode": 4,
+                "archive": "archive.23/_16151_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "out": "reYIK_d.o",
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.23/_prev_archive_1.a"
+            }
+        },
+        "CalcCoin": {
+            "QYLay_d": {
+                "bytes": 11967,
+                "out": "QYLay_d.o",
+                "mod": "CalcCoin",
+                "mode": 4,
+                "archive": "archive.23/_prev_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "CalcCoin": [
+            "CalcCoin",
+            "QYLay",
+            "module"
+        ],
+        "test_change": [
+            "test_change",
+            "wse6d",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "test_change"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60227
+    },
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.16151.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab3",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/csrc",
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.23",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/simv.daidir"
+    },
+    "CompileStatus": "Successful"
+}

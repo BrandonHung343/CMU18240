@@ -1,0 +1,79 @@
+{
+    "CompileStatus": "Successful",
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "hw5prob1": [
+            "hw5prob1",
+            "VnBQi",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "hw5prob1": {
+            "VnBQi_d": {
+                "mode": 4,
+                "bytes": 9603,
+                "mod": "hw5prob1",
+                "out": "VnBQi_d.o",
+                "archive": "archive.1/_52520_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 29004,
+                "mod": "std",
+                "out": "reYIK_d.o",
+                "archive": "archive.1/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 7708,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.1/_52520_archive_1.a"
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.52520.json"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 57094
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "hw5prob1"
+    ],
+    "PEModules": [],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw5",
+        "archive_dir": "archive.1",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw5/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw5/simv.daidir",
+        "daidir": "simv.daidir"
+    },
+    "stat": {
+        "nMops": 288
+    }
+}
