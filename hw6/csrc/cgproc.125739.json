@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "hw5prob2": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.31/_125739_archive_1.a",
+            "bytes": 7708,
+            "mode": 4
+        },
+        "YDHIi_d": {
+            "mod": "hw5prob2",
+            "out": "YDHIi_d.o",
+            "archive": "archive.31/_125739_archive_1.a",
+            "bytes": 10695,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.31/_125739_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7708
+                ],
+                [
+                    "YDHIi_d.o",
+                    10695
+                ]
+            ],
+            "size": 18403
+        }
+    ]
+}

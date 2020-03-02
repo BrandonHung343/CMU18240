@@ -1,0 +1,15 @@
+********************************************************************************
+*                                  18240: hw6                                  *
+*                             Error log for: bhung                             *
+********************************************************************************
+********************************** Problem 5 ***********************************
+hw5prob2.sv, hw6prob5.sv: failed to compile
+
+Error-[IND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw6/hw6prob5.sv, 10
+  Identifier 'Prob2' has not been declared yet. If this error is not expected,
+  please check if you have set `default_nettype to none.
+
+1 error
+
+

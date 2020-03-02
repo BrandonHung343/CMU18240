@@ -1,0 +1,12 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -sverilog -full64
+
+all :		_VCSgd_wxCfRb_1.db \
+
+
+
+_VCSgd_wxCfRb_1.db :	hw6prob6.sv 
+		${VLOGAN}  ${VLOGAN_OPT} hw6prob6.sv
+
+

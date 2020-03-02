@@ -1,0 +1,82 @@
+{
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60446
+    },
+    "MlibObjs": {},
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "archive": "archive.30/_prev_archive_1.a",
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7708,
+                "archive": "archive.30/_113405_archive_1.a",
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "stat": {
+        "nMops": 1721
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "hw6prob6": [
+            "hw6prob6",
+            "CrMP8",
+            "module"
+        ],
+        "hw6prob6_test1": [
+            "hw6prob6_test1",
+            "vE7fY",
+            "module"
+        ],
+        "hw6prob6_test2": [
+            "hw6prob6_test2",
+            "KjrcI",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "hw6prob6",
+        "hw6prob6_test1",
+        "hw6prob6_test2"
+    ],
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw6",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw6/simv.daidir",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw6/csrc",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.30"
+    },
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.113405.json"
+    ]
+}
