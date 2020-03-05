@@ -224,7 +224,7 @@ fHsimNewEvcdObnDrv                 	0
 fHsimEvcdDbgFlags                  	0
 fHsimDumpElabData                  	1
 fHsimNoDeposit                     	0
-fHsimDumpOffsetData                	0
+fHsimDumpOffsetData                	1
 fNoOfsOpt                          	0
 fHsimDynamicElab                   	1
 fHsimDynamicElabDiag               	0
@@ -766,6 +766,6 @@ fHsimAvoidMdbcgCell                	0
 fHsimAvoidOneInputGate             	0
 fHsimCongruencyConfigFile          	0
 fHsimCongruencyLogFile             	0
-fHsimCoverageEnabled               	0
-fHsimCoverageOptions               	0
-fHsimCoverageDir                   	NULL
+fHsimCoverageEnabled               	1
+fHsimCoverageOptions               	1
+fHsimCoverageDir                   	simv.vdb

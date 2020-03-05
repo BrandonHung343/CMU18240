@@ -62,7 +62,8 @@ module myFSM_test();
     @(posedge clock); // 1 cred
     coin <= 2'b00;
     @(posedge clock); // 1 cred
-    
+    coin <= 2'b10;
+    @(posedge clock);
     #1 $finish;
   end
 endmodule: myFSM_test

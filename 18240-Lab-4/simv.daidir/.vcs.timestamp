@@ -1,5 +1,5 @@
 0 
-24
+29
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -16,14 +16,19 @@
 -Msyslibs=-ldl
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-cm
+-cm_line
 -gen_obj
 -nc
 -picarchive
 -q
 -sverilog
+-sverilog
 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
-abstractFSM.sv
-abstractFSMtest.sv
+contassign
+line
+structuralFSM.sv
+structuralFSMtest.sv
 54
 sysc_uni_pwd=/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4
 no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
@@ -80,12 +85,13 @@ CVS_RSH=ssh
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
-2
-1583424873 abstractFSMtest.sv
-1583424790 abstractFSM.sv
+3
+1583425391 structuralFSMtest.sv
+1583424729 structuralFSM.sv
+1440743878 /usr/local/synopsys/vcs-mx_vJ-2014.12/include/cm_vcsd.tab
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1583424878 simv.daidir
+1583425411 simv.daidir

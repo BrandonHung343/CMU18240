@@ -1,0 +1,21 @@
+Dashboard
+
+Date: Thu Mar  5 11:23:48 2020
+
+User: bhung
+
+Version: J-2014.12-SP3-1
+Command line: urg -dir simv.vdb/ -format text 
+
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   
+100.00 100.00 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   NAME       
+100.00 100.00 myFSM_test 
+

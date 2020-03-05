@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="J-2014.12-SP3-1"  />
+      <fileinfo name="structuralFSM.sv"  id="0"  />
+      <fileinfo name="structuralFSMtest.sv"  id="1"  />
+    </srcinfo>

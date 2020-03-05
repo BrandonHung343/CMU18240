@@ -62,6 +62,8 @@ module myAFSM_test();
     coin <= 2'b00;
     @(posedge clock); // 1 cred
     @(posedge clock);
+    coin <= 2'b10;
+    @(posedge clock);
     
     #1 $finish;
   end
