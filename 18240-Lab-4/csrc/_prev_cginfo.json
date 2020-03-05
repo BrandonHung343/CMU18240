@@ -1,0 +1,79 @@
+{
+    "CompileStatus": "Successful",
+    "MlibObjs": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "myStructuralFSM"
+    ],
+    "PEModules": [],
+    "PrevCompiledModules": {
+        "myStructuralFSM": {
+            "AvLLN_d": {
+                "mod": "myStructuralFSM",
+                "bytes": 14709,
+                "out": "AvLLN_d.o",
+                "archive": "archive.1/_212693_archive_1.a",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "mod": "std",
+                "bytes": 29004,
+                "out": "reYIK_d.o",
+                "archive": "archive.1/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mod": "...MASTER...",
+                "bytes": 7923,
+                "out": "amcQw_d.o",
+                "archive": "archive.1/_212693_archive_1.a",
+                "mode": 4
+            }
+        }
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 57676
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "myStructuralFSM": [
+            "myStructuralFSM",
+            "AvLLN",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileUdps": {},
+    "CompileProcesses": [
+        "cgproc.212693.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir",
+        "archive_dir": "archive.1"
+    },
+    "stat": {
+        "nMops": 819
+    }
+}

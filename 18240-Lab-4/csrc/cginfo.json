@@ -1,0 +1,70 @@
+{
+    "MlibObjs": {},
+    "SIMBData": {
+        "bytes": 58033,
+        "out": "amcQwB.o"
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "archive": "archive.2/_prev_archive_1.a",
+                "mod": "std",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 7923,
+                "archive": "archive.2/_226836_archive_1.a",
+                "mod": "...MASTER...",
+                "mode": 4
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "myAbstractFSM": [
+            "myAbstractFSM",
+            "p6HLE",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "myAbstractFSM"
+    ],
+    "PEModules": [],
+    "stat": {
+        "nMops": 547
+    },
+    "CompileProcesses": [
+        "cgproc.226836.json"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.2"
+    },
+    "CompileStatus": "Successful"
+}

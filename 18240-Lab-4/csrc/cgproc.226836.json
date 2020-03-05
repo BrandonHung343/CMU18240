@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "myAbstractFSM": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.2/_226836_archive_1.a",
+            "size": 22488,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7991
+                ],
+                [
+                    "p6HLE_d.o",
+                    14497
+                ]
+            ]
+        }
+    ],
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.2/_226836_archive_1.a",
+            "mod": "...MASTER...",
+            "bytes": 7991,
+            "out": "amcQw_d.o",
+            "mode": 4
+        },
+        "p6HLE_d": {
+            "archive": "archive.2/_226836_archive_1.a",
+            "mod": "myAbstractFSM",
+            "bytes": 14497,
+            "out": "p6HLE_d.o",
+            "mode": 4
+        }
+    }
+}
