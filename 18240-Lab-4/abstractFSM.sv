@@ -22,9 +22,9 @@ module myAbstractFSM (
               else if (coin == 2'b01)
                 nextState <= cred1;
               else if (coin == 2'b10)
-                nextState <= cred2;
-              else
                 nextState <= cred3;
+              else
+                nextState <= cred1Soda;
              end
    cred1: begin
             if (coin == 2'b00)

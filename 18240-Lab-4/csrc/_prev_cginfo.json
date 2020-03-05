@@ -1,53 +1,49 @@
 {
-    "CompileStatus": "Successful",
     "MlibObjs": {},
     "CurCompileModules": [
         "...MASTER...",
-        "myStructuralFSM"
+        "myAFSM_test"
     ],
-    "PEModules": [],
+    "CompileStrategy": "fullobj",
     "PrevCompiledModules": {
-        "myStructuralFSM": {
-            "AvLLN_d": {
-                "mod": "myStructuralFSM",
-                "bytes": 14709,
-                "out": "AvLLN_d.o",
-                "archive": "archive.1/_212693_archive_1.a",
-                "mode": 4
+        "myAFSM_test": {
+            "ZcNnC_d": {
+                "mode": 4,
+                "bytes": 32027,
+                "out": "ZcNnC_d.o",
+                "mod": "myAFSM_test",
+                "archive": "archive.8/_67604_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
-                "mod": "std",
+                "mode": 4,
                 "bytes": 29004,
                 "out": "reYIK_d.o",
-                "archive": "archive.1/_prev_archive_1.a",
-                "mode": 4
+                "mod": "std",
+                "archive": "archive.8/_prev_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "mod": "...MASTER...",
-                "bytes": 7923,
+                "mode": 4,
+                "bytes": 7336,
                 "out": "amcQw_d.o",
-                "archive": "archive.1/_212693_archive_1.a",
-                "mode": 4
+                "mod": "...MASTER...",
+                "archive": "archive.8/_67604_archive_1.a"
             }
         }
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 57676
-    },
+    "PEModules": [],
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "myStructuralFSM": [
-            "myStructuralFSM",
-            "AvLLN",
+        "myAFSM_test": [
+            "myAFSM_test",
+            "ZcNnC",
             "module"
         ],
         "...MASTER...": [
@@ -56,24 +52,28 @@
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 59317
+    },
     "LVLData": [
         "SIM"
     ],
-    "CurCompileUdps": {},
     "CompileProcesses": [
-        "cgproc.212693.json"
+        "cgproc.67604.json"
     ],
     "Misc": {
         "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4",
-        "daidir": "simv.daidir",
         "csrc": "csrc",
-        "default_output_dir": "csrc",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
         "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir",
-        "archive_dir": "archive.1"
+        "archive_dir": "archive.8"
     },
     "stat": {
-        "nMops": 819
-    }
+        "nMops": 1426
+    },
+    "CompileStatus": "Successful"
 }

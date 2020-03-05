@@ -37,7 +37,7 @@ module myStructuralFSM(
 				  else if (coin == 2'b01)
 				    {d2, d1, d0} <= 3'b001;
 				  else if (coin == 2'b10)
-				    {d2, d1, d0} <= 3'b010;
+				    {d2, d1, d0} <= 3'b011;
 				  else
 				    {d2, d1, d0} <= 3'b101;
 				end
@@ -79,7 +79,7 @@ module myStructuralFSM(
 	
 	always_comb begin
 	  drop = q2;
-	  credit = {1'b0, 1'b0, d1, d0};
+	  credit = {1'b0, 1'b0, q1, q0};
 	end
 	
 endmodule: myStructuralFSM

@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "myAFSM_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.9/_68235_archive_1.a",
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4
+        },
+        "ZcNnC_d": {
+            "archive": "archive.9/_68235_archive_1.a",
+            "mod": "myAFSM_test",
+            "out": "ZcNnC_d.o",
+            "bytes": 32453,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "ZcNnC_d.o",
+                    32453
+                ]
+            ],
+            "archive": "archive.9/_68235_archive_1.a",
+            "size": 39789
+        }
+    ]
+}
