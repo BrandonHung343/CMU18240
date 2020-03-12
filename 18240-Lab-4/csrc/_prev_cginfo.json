@@ -1,28 +1,18 @@
 {
-    "CurCompileUdps": {},
     "MlibObjs": {},
-    "PEModules": [],
-    "CurCompileModules": [
-        "...MASTER...",
-        "myAFSM_test"
-    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 65918
+    },
+    "CurCompileUdps": {},
     "PrevCompiledModules": {
-        "myAFSM_test": {
-            "ZcNnC_d": {
-                "bytes": 40060,
-                "mod": "myAFSM_test",
-                "out": "ZcNnC_d.o",
-                "mode": 4,
-                "archive": "archive.11/_70932_archive_1.a"
-            }
-        },
         "std": {
             "reYIK_d": {
                 "bytes": 30047,
                 "mod": "std",
-                "out": "reYIK_d.o",
                 "mode": 4,
-                "archive": "archive.11/_prev_archive_1.a"
+                "archive": "archive.22/_prev_archive_1.a",
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
@@ -31,12 +21,9 @@
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
                 "mode": 4,
-                "archive": "archive.11/_70932_archive_1.a"
+                "archive": "archive.22/_22344_archive_1.a"
             }
         }
-    },
-    "stat": {
-        "nMops": 2292
     },
     "NameTable": {
         "std": [
@@ -56,24 +43,28 @@
         ]
     },
     "CompileStrategy": "fullobj",
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 64547
-    },
-    "CompileProcesses": [
-        "cgproc.70932.json"
+    "CurCompileModules": [
+        "...MASTER...",
+        "myAFSM_test"
     ],
     "LVLData": [
         "SIM"
     ],
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.22344.json"
+    ],
     "Misc": {
-        "default_output_dir": "csrc",
         "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4",
         "csrc": "csrc",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/csrc",
         "daidir": "simv.daidir",
-        "archive_dir": "archive.11",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir"
+        "archive_dir": "archive.22",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir",
+        "default_output_dir": "csrc"
     },
-    "CompileStatus": "Successful"
+    "stat": {
+        "nMops": 2293
+    }
 }

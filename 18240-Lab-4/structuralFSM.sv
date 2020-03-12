@@ -33,48 +33,48 @@ module myStructuralFSM(
     unique case ({q2, q1, q0})
 	  3'b000: begin
 	              if (coin == 2'b00)
-				    {d2, d1, d0} <= 3'b000;
+				    {d2, d1, d0} = 3'b000;
 				  else if (coin == 2'b01)
-				    {d2, d1, d0} <= 3'b001;
+				    {d2, d1, d0} = 3'b001;
 				  else if (coin == 2'b10)
-				    {d2, d1, d0} <= 3'b011;
+				    {d2, d1, d0} = 3'b011;
 				  else
-				    {d2, d1, d0} <= 3'b101;
+				    {d2, d1, d0} = 3'b101;
 				end
 	  3'b001: begin
 	              if (coin == 2'b00)
-				    {d2, d1, d0} <= 3'b001;
+				    {d2, d1, d0} = 3'b001;
 				  else if (coin == 2'b01)
-				    {d2, d1, d0} <= 3'b010;
+				    {d2, d1, d0} = 3'b010;
 				  else if (coin == 2'b10)
-				    {d2, d1, d0} <= 3'b100;
+				    {d2, d1, d0} = 3'b100;
 				  else
-				    {d2, d1, d0} <= 3'b110;
+				    {d2, d1, d0} = 3'b110;
 				end
 	  3'b010: begin
 	              if (coin == 2'b00)
-				    {d2, d1, d0} <= 3'b010;
+				    {d2, d1, d0} = 3'b010;
 				  else if (coin == 2'b01)
-				    {d2, d1, d0} <= 3'b011;
+				    {d2, d1, d0} = 3'b011;
 				  else if (coin == 2'b10)
-				    {d2, d1, d0} <= 3'b101;
+				    {d2, d1, d0} = 3'b101;
 				  else
-				    {d2, d1, d0} <= 3'b111;
+				    {d2, d1, d0} = 3'b111;
 				end
 	  3'b011: begin
 	              if (coin == 2'b00)
-				    {d2, d1, d0} <= 3'b011;
+				    {d2, d1, d0} = 3'b011;
 				  else if (coin == 2'b01)
-				    {d2, d1, d0} <= 3'b100;
+				    {d2, d1, d0} = 3'b100;
 				  else if (coin == 2'b10)
-				    {d2, d1, d0} <= 3'b110;
+				    {d2, d1, d0} = 3'b110;
 				  else
-				    {d2, d1, d0} <= 3'b100;
+				    {d2, d1, d0} = 3'b100;
 				end
-	  3'b100: {d2, d1, d0} <= 3'b000;
-	  3'b101: {d2, d1, d0} <= 3'b001;
-	  3'b110: {d2, d1, d0} <= 3'b010;
-	  3'b111: {d2, d1, d0} <= 3'b011;
+	  3'b100: {d2, d1, d0} = 3'b000;
+	  3'b101: {d2, d1, d0} = 3'b001;
+	  3'b110: {d2, d1, d0} = 3'b010;
+	  3'b111: {d2, d1, d0} = 3'b011;
 	endcase
 	
 	always_comb begin
