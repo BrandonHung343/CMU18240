@@ -1,0 +1,11 @@
+
+State Machine - |abstractChipInterface|myAbstractFSM:dut|currState
+Name currState.cred3Soda currState.cred2Soda currState.cred1Soda currState.cred0Soda currState.cred3 currState.cred2 currState.cred1 currState.init 
+currState.init 0 0 0 0 0 0 0 0 
+currState.cred1 0 0 0 0 0 0 1 1 
+currState.cred2 0 0 0 0 0 1 0 1 
+currState.cred3 0 0 0 0 1 0 0 1 
+currState.cred0Soda 0 0 0 1 0 0 0 1 
+currState.cred1Soda 0 0 1 0 0 0 0 1 
+currState.cred2Soda 0 1 0 0 0 0 0 1 
+currState.cred3Soda 1 0 0 0 0 0 0 1 

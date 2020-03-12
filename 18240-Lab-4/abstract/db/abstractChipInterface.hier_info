@@ -1,0 +1,76 @@
+|abstractChipInterface
+KEY[0] => KEY[0].IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => SW[5].IN1
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+HEX0[0] <= BCDtoSevenSegment:muah.segment
+HEX0[1] <= BCDtoSevenSegment:muah.segment
+HEX0[2] <= BCDtoSevenSegment:muah.segment
+HEX0[3] <= BCDtoSevenSegment:muah.segment
+HEX0[4] <= BCDtoSevenSegment:muah.segment
+HEX0[5] <= BCDtoSevenSegment:muah.segment
+HEX0[6] <= BCDtoSevenSegment:muah.segment
+LEDG[0] <= myAbstractFSM:dut.drop
+LEDG[1] <= myAbstractFSM:dut.drop
+LEDG[2] <= myAbstractFSM:dut.drop
+LEDG[3] <= myAbstractFSM:dut.drop
+LEDG[4] <= myAbstractFSM:dut.drop
+LEDG[5] <= myAbstractFSM:dut.drop
+LEDG[6] <= myAbstractFSM:dut.drop
+LEDG[7] <= myAbstractFSM:dut.drop
+
+
+|abstractChipInterface|myAbstractFSM:dut
+coin[0] => Equal0.IN1
+coin[0] => Equal1.IN0
+coin[0] => Equal2.IN1
+coin[1] => Equal0.IN0
+coin[1] => Equal1.IN1
+coin[1] => Equal2.IN0
+drop <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+credit[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+credit[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+credit[2] <= <GND>
+credit[3] <= <GND>
+clock => currState~1.DATAIN
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+reset_N => currState.OUTPUTSELECT
+
+
+|abstractChipInterface|BCDtoSevenSegment:muah
+bcd[0] => Decoder0.IN3
+bcd[1] => Decoder0.IN2
+bcd[2] => Decoder0.IN1
+bcd[3] => Decoder0.IN0
+segment[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
