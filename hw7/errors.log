@@ -1,0 +1,15 @@
+********************************************************************************
+*                                  18240: hw7                                  *
+*                             Error log for: bhung                             *
+********************************************************************************
+********************************** Problem 5 ***********************************
+hw7prob5.sv, library.sv: failed to compile
+
+Error-[IND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw7/hw7prob5.sv, 37
+  Identifier 'W' has not been declared yet. If this error is not expected, 
+  please check if you have set `default_nettype to none.
+
+1 error
+
+

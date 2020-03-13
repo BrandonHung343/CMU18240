@@ -1,0 +1,46 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.42/_2651_archive_1.a",
+            "size": 35688,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    8731
+                ],
+                [
+                    "gEuBs_d.o",
+                    26957
+                ]
+            ]
+        }
+    ],
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.42/_2651_archive_1.a",
+            "mode": 4,
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 8731
+        },
+        "gEuBs_d": {
+            "archive": "archive.42/_2651_archive_1.a",
+            "mode": 4,
+            "mod": "serialTwosComp_test",
+            "out": "gEuBs_d.o",
+            "bytes": 26957
+        }
+    },
+    "Modules": {
+        "Multiplexer": {},
+        "...MASTER...": {},
+        "Decoder": {},
+        "MagComp": {},
+        "std": {},
+        "serialTwosComp_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "Mux2to1": {}
+    }
+}

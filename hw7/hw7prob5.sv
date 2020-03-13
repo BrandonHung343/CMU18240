@@ -2,7 +2,7 @@
 
 module fsm
   (input logic clock, reset_L, start, inputB, inputC,
-   output logic en, done);
+   output logic en, done, clear);
    
   enum logic [3:0] {init=4'b1000, checkC=4'b0100, 
                     checkB=4'b0010, stop=4'b0000} Q, D;
@@ -18,27 +18,29 @@ module fsm
   always_ff @(posedge clock, negedge reset_L)
     if (~reset_L) Q <= init;
     else Q <= D;
-  
-  assign en = ((Q == checkB) && inputB) ? 1 : 0;
+
+
+  assign clear = (Q == init) ? 1 : 0;  
+  assign en = (((Q == checkB) && inputB) || (Q == init)) ? 1 : 0;
   assign done = (Q == stop) ? 1 : 0;
 endmodule: fsm
 
 module prob5FSMD
-  #(parameter W = 8)
+  // #(parameter W = 8)
   (input logic start, inputC, inputB,
    input logic clock, reset_L,
-   input logic [W-1:0] inputA,
+   input logic [7:0] inputA,
    output logic done, 
-   output logic [W-1:0] value);
+   output logic [7:0] value);
    
-  logic en, dontUse;
-  logic [W-1:0] addOut;
+  logic en, dontUse, clear;
+  logic [7:0] addOut;
   
   fsm dut (.*);
-  Adder #(W) a1 (.A(inputA), .B(value), .Cin(1'b0),
+  Adder #(8) a1 (.A(inputA), .B(value), .Cin(1'b0),
                  .S(addOut), .Cout(dontUse));
-  Register #(W) r1 (.D(addOut), .en, .clear(1'b0), 
-                    .clock, .reset_L, .Q(value));
+  Register #(8) r1 (.D(addOut), .en, .clear, 
+                    .clock, .Q(value));
 endmodule: prob5FSMD
                     
   

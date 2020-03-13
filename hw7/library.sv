@@ -89,15 +89,12 @@ module Register
   # (parameter WIDTH = 1)
   (input logic [WIDTH-1:0] D,
    input logic en, clear,
-   input logic clock, reset_L,
+   input logic clock,
    output logic [WIDTH-1:0] Q);
    
-  always_ff @(posedge clock, 
-              negedge reset_L)
-    if (~reset_L)
-      Q <= 0;
-    else if (en)
-      Q <= clear ? 0 : D;
+   always_ff @(posedge clock)
+     if (en)
+       Q <= clear ? 0 : D;
       
 endmodule: Register
   

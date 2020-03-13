@@ -1,17 +1,37 @@
 {
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
+    "MagComp": [
+        "MagComp",
+        "vaLRj",
+        "module"
+    ],
     "std": [
         "std",
         "reYIK",
         "module"
     ],
-    "Register_test": [
-        "Register_test",
-        "SSQnw",
+    "serialTwosComp_test": [
+        "serialTwosComp_test",
+        "gEuBs",
         "module"
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
+        "module"
+    ],
+    "Multiplexer": [
+        "Multiplexer",
+        "UxyT3",
+        "module"
+    ],
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
         "module"
     ]
 }

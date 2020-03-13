@@ -8,8 +8,9 @@ module hw7prob5_test ();
   
   initial begin
     $monitor($time,, "state=%s, inputA=%d, inputB=%b, inputC=%b, value=%d,\
-                      done=%b, reset_L=%b, start=%b", dut.dut.Q.name, 
-                      inputA, inputB, inputC, value, done, reset_L, start);
+                      done=%b, reset_L=%b, start=%b, en=%b", dut.dut.Q.name, 
+                      inputA, inputB, inputC, value, done, reset_L, 
+                      start, dut.en);
     clock = 0;
     forever #5 clock = ~clock;
   end
