@@ -131,11 +131,17 @@ module Register_test ();
     D = 3'b011;
     clear = 1;
     @(posedge clock);
+    en = 0;
+    @(posedge clock);
     clear = 0;
     @(posedge clock);
+    @(posedge clock);
     D = 3'b111;
+    en = 1;
     @(posedge clock);
     D = 3'b101;
+    en = 0;
+    @(posedge clock);
     #1 $finish;
   end
       
