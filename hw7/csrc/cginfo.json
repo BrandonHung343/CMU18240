@@ -1,0 +1,79 @@
+{
+    "MlibObjs": {},
+    "PEModules": [],
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.13/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "bytes": 7336,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "archive": "archive.13/_118329_archive_1.a"
+            }
+        },
+        "Register_test": {
+            "SSQnw_d": {
+                "out": "SSQnw_d.o",
+                "bytes": 16580,
+                "mod": "Register_test",
+                "mode": 4,
+                "archive": "archive.13/_118329_archive_1.a"
+            }
+        }
+    },
+    "CompileProcesses": [
+        "cgproc.118329.json"
+    ],
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Register_test": [
+            "Register_test",
+            "SSQnw",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "nMops": 527
+    },
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "Register_test"
+    ],
+    "SIMBData": {
+        "bytes": 60495,
+        "out": "amcQwB.o"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw7",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.13"
+    },
+    "CompileStatus": "Successful"
+}

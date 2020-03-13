@@ -1,0 +1,79 @@
+{
+    "MlibObjs": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "Register_test"
+    ],
+    "stat": {
+        "nMops": 517
+    },
+    "CurCompileUdps": {},
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw7",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/simv.daidir",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/csrc",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.12"
+    },
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "archive": "archive.12/_prev_archive_1.a",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7336,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.12/_115169_archive_1.a",
+                "mode": 4
+            }
+        },
+        "Register_test": {
+            "SSQnw_d": {
+                "bytes": 15544,
+                "mod": "Register_test",
+                "archive": "archive.12/_115169_archive_1.a",
+                "mode": 4,
+                "out": "SSQnw_d.o"
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Register_test": [
+            "Register_test",
+            "SSQnw",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60495
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.115169.json"
+    ],
+    "CompileStatus": "Successful"
+}

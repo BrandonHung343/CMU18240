@@ -31,9 +31,9 @@ endmodule: MagComp
 
 module Multiplexer
   # (parameter WIDTH = 2)
-  parameter S_WIDTH = $clog2(WIDTH);
+  // parameter S_WIDTH = $clog2(WIDTH);
   (input logic [WIDTH-1:0] I,
-   input logic [S_WIDTH-1:0] S,
+   input logic [$clog2(WIDTH)-1:0] S,
    output logic Y);
   
   always_comb begin
@@ -52,12 +52,12 @@ module Mux2to1
    
   assign Y = S ? I1 : I0;
 
-endmodule Mux2to1
+endmodule: Mux2to1
 
 module Decoder 
-    # (parameter WIDTH = 1);
-    parameter I_WIDTH = $clog2(WIDTH);
-    (input logic [I_WIDTH-1:0] I,
+    # (parameter WIDTH = 1)
+    // parameter I_WIDTH = $clog2(WIDTH);
+    (input logic [$clog2(WIDTH)-1:0] I,
      input logic en,
      output logic [WIDTH-1:0] D);
      

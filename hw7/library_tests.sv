@@ -43,7 +43,7 @@ module Mux2to1_test ();
   logic [6:0] I0, I1, Y;
   logic S;
   
-  Muz2to1 #(7) m1 (.*);
+  Mux2to1 #(7) m1 (.*);
   
   initial begin
     $monitor($time,, "I0=%b, I1=%b, Y=%b, S=%b",
@@ -57,14 +57,14 @@ module Mux2to1_test ();
 endmodule: Mux2to1_test
 
 module Decoder_test ();
-  parameter WIDTH = 3;
-  parameter I_WIDTH = $clog2(WIDTH);
+  // `define WIDTH1 3
+  // `define I_WIDTH1 2
     
-  logic [WIDTH-1:0] D;
-  logic [I_WIDTH-1:0] I;
+  logic [2:0] D;
+  logic [1:0] I;
   logic en;
   
-  Decoder (#WIDTH) dec (.*);
+  Decoder #(3) dec (.*);
   
   initial begin
     $monitor($time,, "I=%d, en=%b, D=%b", I, en, D);
@@ -77,14 +77,14 @@ module Decoder_test ();
 endmodule: Decoder_test
 
 module Adder_test ();
-  parameter WIDTH = 8;
+  // `define 8 8
   logic Cin, Cout;
-  logic [WIDTH-1:0] A, B, S;
+  logic [7:0] A, B, S;
   
-  Adder (#WIDTH) add (.*);
+  Adder #(8) add (.*);
   
   initial begin
-    $monitor($time,, "A=%d, B=%d, C=$b", A, B, Cin, Cout, S);
+    $monitor($time,, "A=%d, B=%d, Cin=%b, Cout=%b, S=%d", A, B, Cin, Cout, S);
     #5 A = 27;
        B = 0;
        Cin = 1'b0;
@@ -98,13 +98,13 @@ module Adder_test ();
 endmodule: Adder_test
 
 
-module Register_test
-  parameter WIDTH = 3;
-  logic [WIDTH-1:0] D, Q;
+module Register_test ();
+  //`define 3 3
+  logic [2:0] D, Q;
   logic en, clear;
   logic clock, reset_L;
   
-  Register (#WIDTH) regis (.*);
+  Register #(3) regis (.*);
   
   initial begin
     $monitor($time,, "Q=%d, D=%d, en=%d, clear=%b",
@@ -116,6 +116,7 @@ module Register_test
   initial begin
     D = 3'b000;
     en = 0;
+    clear = 0;
     reset_L <= 0;
     @(posedge clock); 
     reset_L <= 1;
@@ -125,8 +126,16 @@ module Register_test
     @(posedge clock); 
     en = 1;
     @(posedge clock); 
+    D = 3'b010; 
     @(posedge clock);
-    D = 3'b010;
+    D = 3'b011;
+    clear = 1;
+    @(posedge clock);
+    clear = 0;
+    @(posedge clock);
+    D = 3'b111;
+    @(posedge clock);
+    D = 3'b101;
     #1 $finish;
   end
       
