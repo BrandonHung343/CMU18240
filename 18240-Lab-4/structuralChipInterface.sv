@@ -13,7 +13,6 @@ module structuralChipInterface (
                     .credit(creditVal), .drop(dropVal));
 
   BCDtoSevenSegment muah(.bcd(creditVal), .segment(HEX0));
-  // BCDtoSevenSegment muwe (.bcd({1'b0, dut.q2, dut.q1, dut.q0}), segment(HEX1));
   
   always_comb begin
     if (dropVal)

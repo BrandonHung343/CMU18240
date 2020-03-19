@@ -38,15 +38,11 @@ module myStructuralFSM(
           (q2 & q1) | (~q2 & ~q1 & q0 & coin[0]);
     d2 = (~q2 & q1 & coin[1]) | (~q2 & coin[1] & q0) | (~q2 & 
           q1 & q0 & coin[0]) | (~q2 & ~q1 & coin[1] & coin[0]);
-  end
-          
-          
-        
-    
-	
+  end        
+ 
 	always_comb begin
-	  drop = q2;
-	  credit = {1'b0, 1'b0, q1, q0};
+		drop = q2;
+		credit = {1'b0, 1'b0, q1, q0};
 	end
 	
 endmodule: myStructuralFSM

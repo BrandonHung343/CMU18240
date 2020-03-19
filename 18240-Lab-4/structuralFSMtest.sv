@@ -4,7 +4,8 @@ module myFSM_test();
   logic drop, clock, reset;
   myStructuralFSM dut(.*);
   initial begin
-    $monitor($time,, "q2=%b, q1=%b, q0=%b, coin1=%b, coin0=%b, credit=%d, drop=%b",
+    $monitor($time,, "q2=%b, q1=%b, q0=%b, coin1=%b, coin0=%b, /
+                      credit=%d, drop=%b",
             dut.q2, dut.q1, dut.q0, coin[1], coin[0], credit, drop);
     clock = 0;
     forever #5 clock = ~clock;
