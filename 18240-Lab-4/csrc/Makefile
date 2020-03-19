@@ -19,7 +19,7 @@ PRODUCT_TIMESTAMP=product_timestamp
 # Path to runtime library
 DEPLIBS=
 VCSUCLI=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsucli.so
-RUNTIME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsnew.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libreader_common.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libBA.a /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libuclinative.so $(DEPLIBS) 
+RUNTIME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvcsnew.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libuclinative.so $(DEPLIBS) 
 
 VCS_SAVE_RESTORE_OBJ=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
 

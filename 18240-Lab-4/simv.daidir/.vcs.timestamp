@@ -1,5 +1,5 @@
 0 
-27
+24
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -16,36 +16,23 @@
 -Msyslibs=-ldl
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
--cm
 -gen_obj
 -nc
 -picarchive
 -q
 -sverilog
--sverilog
 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
-abstract/abstractFSM.sv
-abstractFSMtest.sv
-line+fsm
-74
+structuralFSM.sv
+structuralFSMtest.sv
+54
 sysc_uni_pwd=/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4
 no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
 https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
-XMODIFIERS=@im=ibus
-XDG_VTNR=1
-XDG_SESSION_TYPE=x11
-XDG_SESSION_ID=368
-XDG_SESSION_DESKTOP=gnome-classic
-XDG_SEAT=seat0
+XDG_SESSION_ID=12130
 XDG_RUNTIME_DIR=/run/user/2645838
-XDG_MENU_PREFIX=gnome-
-XDG_DATA_DIRS=/afs/ece.cmu.edu/usr/bhung/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
-XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
-XAUTHORITY=/run/gdm/auth-for-bhung-O7t4ap/database
-WINDOWPATH=1:1:1
-VTE_VERSION=5202
+XDG_DATA_DIRS=/afs/ece.cmu.edu/usr/bhung/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=32
 VCS_TARGET_ARCH=amd64
 VCS_MX_HOME_INTERNAL=1
@@ -56,20 +43,21 @@ VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=amd64
-USERNAME=bhung
 UNAME=/bin/uname
 TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
 SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
 SYNOPSYS=/usr/local/synopsys
-SSH_AUTH_SOCK=/run/user/2645838/keyring/ssh
+SSH_TTY=/dev/pts/14
+SSH_CONNECTION=128.2.13.137 40444 172.19.136.190 22
+SSH_CLIENT=128.2.13.137 40444 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=3553
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3531,unix/unix:/tmp/.ICE-unix/3531
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QUARTUS_64BIT=1
 QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
-QT_IM_MODULE=ibus
 QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
@@ -86,30 +74,18 @@ KDEDIRS=/usr
 HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
 HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
 HISTCONTROL=ignoredups
-GNOME_TERMINAL_SERVICE=:1.84
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/dec7cacf_225d_4a1d_823f_58fc99248728
-GNOME_SHELL_SESSION_MODE=classic
-GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-GJS_DEBUG_TOPICS=JS ERROR;JS LOG
-GJS_DEBUG_OUTPUT=stderr
-GDM_LANG=en_US.UTF-8
-GDMSESSION=gnome-classic
 FTP_PROXY=http://proximus.ece.cmu.edu:3128/
-DESKTOP_SESSION=gnome-classic
 DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-d7lbLks8GB,guid=95c6dd194f0975c587f998385e613cdb
 CVS_RSH=ssh
-COLORTERM=truecolor
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
-3
-1583425269 abstractFSMtest.sv
-1583436606 abstract/abstractFSM.sv
-1440743878 /usr/local/synopsys/vcs-mx_vJ-2014.12/include/cm_vcsd.tab
+2
+1584661151 structuralFSMtest.sv
+1584661502 structuralFSM.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1583436964 simv.daidir
+1584661511 simv.daidir

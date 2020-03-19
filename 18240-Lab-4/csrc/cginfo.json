@@ -1,44 +1,47 @@
 {
+    "MlibObjs": {},
+    "CompileStrategy": "fullobj",
     "PrevCompiledModules": {
-        "myAFSM_test": {
-            "ZcNnC_d": {
-                "bytes": 40046,
-                "mod": "myAFSM_test",
-                "out": "ZcNnC_d.o",
+        "myFSM_test": {
+            "h1753_d": {
+                "bytes": 29510,
+                "out": "h1753_d.o",
+                "mod": "myFSM_test",
                 "mode": 4,
-                "archive": "archive.23/_23698_archive_1.a"
+                "archive": "archive.28/_96812_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
-                "bytes": 30047,
+                "bytes": 29004,
+                "out": "reYIK_d.o",
                 "mod": "std",
                 "mode": 4,
-                "archive": "archive.23/_prev_archive_1.a",
-                "out": "reYIK_d.o"
+                "archive": "archive.28/_prev_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
                 "bytes": 7336,
-                "mod": "...MASTER...",
                 "out": "amcQw_d.o",
+                "mod": "...MASTER...",
                 "mode": 4,
-                "archive": "archive.23/_23698_archive_1.a"
+                "archive": "archive.28/_96812_archive_1.a"
             }
         }
     },
-    "MlibObjs": {},
-    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "myAFSM_test": [
-            "myAFSM_test",
-            "ZcNnC",
+        "myFSM_test": [
+            "myFSM_test",
+            "h1753",
             "module"
         ],
         "...MASTER...": [
@@ -47,33 +50,30 @@
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 65869
+        "bytes": 62171
     },
-    "LVLData": [
-        "SIM"
-    ],
     "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "myAFSM_test"
-    ],
-    "PEModules": [],
-    "stat": {
-        "nMops": 2287
-    },
-    "CompileProcesses": [
-        "cgproc.23698.json"
+        "myFSM_test"
     ],
     "Misc": {
-        "daidir": "simv.daidir",
         "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4",
-        "archive_dir": "archive.23",
+        "archive_dir": "archive.28",
+        "daidir": "simv.daidir",
         "csrc": "csrc",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/csrc",
         "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-4/simv.daidir",
         "default_output_dir": "csrc"
-    }
+    },
+    "PEModules": [],
+    "stat": {
+        "nMops": 1504
+    },
+    "CompileProcesses": [
+        "cgproc.96812.json"
+    ],
+    "CompileStatus": "Successful"
 }

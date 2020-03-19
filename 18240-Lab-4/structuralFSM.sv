@@ -35,7 +35,7 @@ module myStructuralFSM(
     d1 = (q1 & ~coin[1] & ~coin[0]) | (q1 & ~q0 & coin[0]) |
          (q1 & q0 & coin[1] & ~coin[0]) | (~q2 & q1 & ~q0 &
           coin[0]) | (~q2 & ~q1 & ~q0 & coin[1] & ~coin[0]) |
-          (q2 & q1);
+          (q2 & q1) | (~q2 & ~q1 & q0 & coin[0]);
     d2 = (~q2 & q1 & coin[1]) | (~q2 & coin[1] & q0) | (~q2 & 
           q1 & q0 & coin[0]) | (~q2 & ~q1 & coin[1] & coin[0]);
   end

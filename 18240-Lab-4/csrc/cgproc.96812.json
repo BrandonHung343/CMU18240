@@ -2,41 +2,41 @@
     "Modules": {
         "...MASTER...": {},
         "std": {},
-        "myAFSM_test": {
+        "myFSM_test": {
             "Compiled": "Yes",
-            "Compiled Times": 2
+            "Compiled Times": 1
         }
     },
     "CompUnits": {
         "amcQw_d": {
-            "mod": "...MASTER...",
             "out": "amcQw_d.o",
+            "mod": "...MASTER...",
             "bytes": 7336,
             "mode": 4,
-            "archive": "archive.23/_23698_archive_1.a"
+            "archive": "archive.28/_96812_archive_1.a"
         },
-        "ZcNnC_d": {
-            "mod": "myAFSM_test",
-            "out": "ZcNnC_d.o",
-            "bytes": 39168,
+        "h1753_d": {
+            "out": "h1753_d.o",
+            "mod": "myFSM_test",
+            "bytes": 29582,
             "mode": 4,
-            "archive": "archive.23/_23698_archive_1.a"
+            "archive": "archive.28/_96812_archive_1.a"
         }
     },
     "ObjArchives": [
         {
-            "archive": "archive.23/_23698_archive_1.a",
+            "archive": "archive.28/_96812_archive_1.a",
             "objects": [
                 [
                     "amcQw_d.o",
                     7336
                 ],
                 [
-                    "ZcNnC_d.o",
-                    39168
+                    "h1753_d.o",
+                    29582
                 ]
             ],
-            "size": 46504
+            "size": 36918
         }
     ]
 }
