@@ -29,53 +29,20 @@ module myStructuralFSM(
   // state assignments: init = 000, 1cred = 001,
   // 2cred = 010, 3cred = 011, 0credSoda = 100,
   // 1credSoda = 101, 2credSoda = 110, 3credSoda = 111
-  always_comb
-    unique case ({q2, q1, q0})
-	  3'b000: begin
-	              if (coin == 2'b00)
-				    {d2, d1, d0} = 3'b000;
-				  else if (coin == 2'b01)
-				    {d2, d1, d0} = 3'b001;
-				  else if (coin == 2'b10)
-				    {d2, d1, d0} = 3'b011;
-				  else
-				    {d2, d1, d0} = 3'b101;
-				end
-	  3'b001: begin
-	              if (coin == 2'b00)
-				    {d2, d1, d0} = 3'b001;
-				  else if (coin == 2'b01)
-				    {d2, d1, d0} = 3'b010;
-				  else if (coin == 2'b10)
-				    {d2, d1, d0} = 3'b100;
-				  else
-				    {d2, d1, d0} = 3'b110;
-				end
-	  3'b010: begin
-	              if (coin == 2'b00)
-				    {d2, d1, d0} = 3'b010;
-				  else if (coin == 2'b01)
-				    {d2, d1, d0} = 3'b011;
-				  else if (coin == 2'b10)
-				    {d2, d1, d0} = 3'b101;
-				  else
-				    {d2, d1, d0} = 3'b111;
-				end
-	  3'b011: begin
-	              if (coin == 2'b00)
-				    {d2, d1, d0} = 3'b011;
-				  else if (coin == 2'b01)
-				    {d2, d1, d0} = 3'b100;
-				  else if (coin == 2'b10)
-				    {d2, d1, d0} = 3'b110;
-				  else
-				    {d2, d1, d0} = 3'b100;
-				end
-	  3'b100: {d2, d1, d0} = 3'b000;
-	  3'b101: {d2, d1, d0} = 3'b001;
-	  3'b110: {d2, d1, d0} = 3'b010;
-	  3'b111: {d2, d1, d0} = 3'b011;
-	endcase
+  always_comb begin
+    d0 = (q2 & q0) | (~q2 & ~q0 & coin[0]) | (q0 & ~coin[1] 
+          & ~coin[0]) | (~q2 & ~q0 & coin[1]) | (q2 & q0);
+    d1 = (q1 & ~coin[1] & ~coin[0]) | (q1 & ~q0 & coin[0]) |
+         (q1 & q0 & coin[1] & ~coin[0]) | (~q2 & q1 & ~q0 &
+          coin[0]) | (~q2 & ~q1 & ~q0 & coin[1] & ~coin[0]) |
+          (q2 & q1);
+    d2 = (~q2 & q1 & coin[1]) | (~q2 & coin[1] & q0) | (~q2 & 
+          q1 & q0 & coin[0]) | (~q2 & ~q1 & coin[1] & coin[0]);
+  end
+          
+          
+        
+    
 	
 	always_comb begin
 	  drop = q2;
