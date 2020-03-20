@@ -23,8 +23,8 @@ module myStructuralFSM(
   
   dFlipFlop ff0 (.d(d0), .q(q0), .clock, .reset),
             ff1 (.d(d1), .q(q1), .clock, .reset),
-			ff2 (.d(d2), .q(q2), .clock, .reset);
-			
+      ff2 (.d(d2), .q(q2), .clock, .reset);
+      
   // state logic
   // state assignments: init = 000, 1cred = 001,
   // 2cred = 010, 3cred = 011, 0credSoda = 100,
@@ -40,11 +40,11 @@ module myStructuralFSM(
           q1 & q0 & coin[0]) | (~q2 & ~q1 & coin[1] & coin[0]);
   end        
  
-	always_comb begin
-		drop = q2;
-		credit = {1'b0, 1'b0, q1, q0};
-	end
-	
+  always_comb begin
+    drop = q2;
+    credit = {1'b0, 1'b0, q1, q0};
+  end
+  
 endmodule: myStructuralFSM
-	
-	
+  
+  

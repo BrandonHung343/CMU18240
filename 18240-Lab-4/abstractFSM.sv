@@ -7,7 +7,7 @@ module myAbstractFSM (
   input logic clock, reset_N);
   enum logic [2:0] {init = 3'b000, cred1 = 3'b001, cred2 = 3'b010, 
                     cred3 = 3'b011, cred0Soda = 3'b100, cred1Soda = 3'b101,
-										cred2Soda = 3'b110, cred3Soda = 3'b111} 
+                    cred2Soda = 3'b110, cred3Soda = 3'b111} 
                     currState, nextState;
 // (increase bitwidth if you need more than eight states)
 // (don't specify state encoding values)
@@ -87,8 +87,8 @@ module myAbstractFSM (
               end
    cred3Soda: begin
                 drop = 1;
-								credit = 4'b0011;
-						 end
+                credit = 4'b0011;
+             end
     endcase
   end
 
