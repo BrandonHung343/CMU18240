@@ -149,7 +149,7 @@ module BarrelShiftRegister
  module Memory
   #(parameter DW = 16,
               W = 256,
-              AW = $clog2(W));
+              AW = $clog2(W))
    (input logic re, we, clock,
     input logic [AW-1:0] Addr,
     inout tri   [DW-1:0] Data);
