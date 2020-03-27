@@ -11,7 +11,7 @@ module lab5p1
    logic [2:0] fsm_notif;
    logic [3:0] how_much;
    logic end_seq, len_reached, en_pc, cl_pc, re_p, 
-         re_s, en_wc, cl_wc, cl_lc, en_cl;
+         re_s, en_wc, cl_wc, cl_lc, en_lc;
    logic seqLt, seqEq, seqGt;
    logic lenLt, lenEq, lenGt;
    logic [15:0] WordCount;
@@ -20,9 +20,9 @@ module lab5p1
    
    fsm FSM (.*);
    
-   MemoryNucs #(2) #(65536) Seq_Mem (.re(re_s), .we(1'b0), .clock,
+   MemoryNucs Seq_Mem (.re(re_s), .we(1'b0), .clock,
                                       .Addr(WordCount), .Data(nuc));
-   MemoryPattern #(8) #(4096) Pattern_Mem (.re(re_p), .we(1'b0), .clock,
+   MemoryPattern Pattern_Mem (.re(re_p), .we(1'b0), .clock,
                       .Addr(PatternCount), .Data(pattern));
                       
    PatternChecker PatCheck (.*);

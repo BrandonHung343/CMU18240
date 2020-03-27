@@ -149,7 +149,7 @@ endmodule: BarrelShiftRegister
 module MemoryNucs
   #(parameter DW = 2,
               W = 65536,
-              AW = $clog2(W));
+              AW = $clog2(W))
    (input logic re, we, clock,
     input logic [AW-1:0] Addr,
     output logic [DW-1:0] Data);
@@ -159,7 +159,7 @@ module MemoryNucs
    
   assign Data = (re) ? out : 16'b0;
    
-  always_ff @(posedge clock)
+  always @(posedge clock)
     if (we)
       M[Addr] <= Data;
       
@@ -174,7 +174,7 @@ endmodule: MemoryNucs
 module MemoryPattern
   #(parameter DW = 8,
               W = 4096,
-              AW = $clog2(W));
+              AW = $clog2(W))
    (input logic re, we, clock,
     input logic [AW-1:0] Addr,
     output logic [DW-1:0] Data);
@@ -184,7 +184,7 @@ module MemoryPattern
    
   assign Data = (re) ? out : 16'b0;
    
-  always_ff @(posedge clock)
+  always @(posedge clock)
     if (we)
       M[Addr] <= Data;
       

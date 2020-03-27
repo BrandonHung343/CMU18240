@@ -1,0 +1,92 @@
+{
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
+            "module"
+        ],
+        "lab5p1": [
+            "lab5p1",
+            "ZGY06",
+            "module"
+        ],
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
+            "module"
+        ],
+        "Mux2to1": [
+            "Mux2to1",
+            "wxUbx",
+            "module"
+        ],
+        "Adder": [
+            "Adder",
+            "xUt1z",
+            "module"
+        ],
+        "Register": [
+            "Register",
+            "kynWL",
+            "module"
+        ],
+        "ShiftRegister": [
+            "ShiftRegister",
+            "WB1J1",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 59994
+    },
+    "CompileProcesses": [
+        "cgproc.9741.json"
+    ],
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "lab5p1",
+        "Multiplexer",
+        "Mux2to1",
+        "Decoder",
+        "Adder",
+        "Register",
+        "ShiftRegister",
+        "BarrelShiftRegister"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "Misc": {
+        "archive_dir": "archive.0",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab5",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "stat": {
+        "nMops": 5394
+    }
+}

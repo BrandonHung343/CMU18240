@@ -3,9 +3,9 @@
 module PatternChecker 
   #(parameter NW = 2,
               PW = 8)
-  (inout tri [NW-1:0] nuc,
-   inout tri [PW-1:0] pattern,
-   output logic [2:0] fsm_notif
+  (input logic [NW-1:0] nuc,
+   input logic [PW-1:0] pattern,
+   output logic [2:0] fsm_notif,
    output logic [3:0] how_much);
    
    // match = 3'b000, no_match = 3'b001, 

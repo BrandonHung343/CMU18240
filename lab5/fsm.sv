@@ -2,23 +2,26 @@
 
 module fsm
   (input logic [2:0] fsm_notif, 
-   input logic end_seq, len_reached
+   input logic end_seq, len_reached,
    input logic ready,
    input logic clock, reset_N,
    output logic en_pc, cl_pc, re_p, re_s, en_wc, cl_wc,
-                cl_lc, en_cl, done, found_it, error);
+                cl_lc, en_lc, done, found_it, error);
                 
    enum logic [3:0] {start = 4'b0000, readLetPat = 4'b0001,
                      checkPattern = 4'b0010, compTwoFirst = 4'b0011,
                      compTwoSec = 4'b0100, compThreeFirst = 4'b0101,
                      compThreeSec = 4'b0110, compThreeThird = 4'b0111,
-                     zeroMatchAll = 4'b0110, oneMatchAll = 4'b0111,
+                     zeroMatchAll = 4'b1100, oneMatchAll = 4'b1101,
                      zeroMatchUpTo = 4'b1000, oneMatchUpTo = 4'b1001,
                      doneOneLeft = 4'b1010, doneTwoLeft = 4'b1011}
                      state, nextState;
                      
    // next state logic
-   always_comb
+   always_comb begin
+    if (fsm_notif == 2)
+       nextState = start;
+    else
     unique case (state)
       start : nextState = (ready) ? readLetPat : start;
       readLetPat : nextState = checkPattern;
@@ -47,7 +50,7 @@ module fsm
       compThreeThird : nextState = 
                     (fsm_notif == 0) ? readLetPat : start; // bad
       zeroMatchAll : nextState = 
-                    (fsm_notif == 0) ? oneMatchAll : start // bad
+                    (fsm_notif == 0) ? oneMatchAll : start; // bad
       oneMatchAll : begin
                       if (fsm_notif == 0 && len_reached == 0)
                         nextState = oneMatchAll;
@@ -63,11 +66,7 @@ module fsm
       doneOneLeft : nextState = readLetPat;
       doneTwoLeft : nextState = doneOneLeft;
     endcase
-
-    always_comb begin
-      if (fsm_notif == 2)
-        nextState = start;
-    end
+   end
 
    always_ff @(posedge clock)
     if (~reset_N)
