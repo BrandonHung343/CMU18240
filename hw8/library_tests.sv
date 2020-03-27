@@ -1,3 +1,4 @@
+`default_nettype none
 module MagComp_test ();
   logic [4:0] A1, B1;
   logic AltB, AgtB, AeqB;
@@ -152,17 +153,18 @@ module Counter_test ();
   logic en, clear, load, up;
   logic clock;
   logic [5:0] D, Q;
+
+  Counter #(6) counti (.*);
   
   initial begin
-    $monitor($time,, "Q=%d, D=%d, en=%d, clear=%b/
+    $monitor($time,, "Q=%d, D=%d, en=%d, clear=%b \
                       load=%b, up=%b",
              Q, D, en, clear, load, up);
     clock = 0;
     forever #5 clock = ~clock;
   end
   
-  Counter #(6) counti (.*);
-  
+ 
   initial begin
     en = 0;
     clear = 0;
@@ -184,6 +186,7 @@ module Counter_test ();
     load = 1;
     @(posedge clock);
     #1 $finish;
+  end
     
 endmodule: Counter_test
     
@@ -206,7 +209,7 @@ module ShiftRegister_test ();
     en = 0;
     left = 0;
     load = 0;
-    up = 0;
+    // up = 0;
     D = 9'b00000001;
     @(posedge clock);
     en = 1;
@@ -230,6 +233,7 @@ module ShiftRegister_test ();
     left = 0;
     @(posedge clock);
     #1 $finish;
+  end
     
 endmodule: ShiftRegister_test
     
@@ -253,7 +257,7 @@ module BarrelShiftRegister_test ();
     en = 0;
     by = 2'b01;
     load = 0;
-    up = 0;
+    // up = 0;
     D = 5'b00001;
     @(posedge clock);
     en = 1;
@@ -283,13 +287,14 @@ module BarrelShiftRegister_test ();
     @(posedge clock);
     @(posedge clock);
     #1 $finish;
+  end
     
 endmodule: BarrelShiftRegister_test
   
 module Memory_test();
   logic re, we, clock;
   logic [7:0] Addr;
-  logic [15:0] Data;
+  tri [15:0] Data;
   
   Memory memi (.*);
   initial begin
@@ -302,6 +307,7 @@ module Memory_test();
   initial begin
     we = 1;
     Addr = 7'b1101101;
+    assign Data = 16'b0000000000000001;
     re = 0;
     @(posedge clock);
     re = 1;
@@ -310,6 +316,7 @@ module Memory_test();
     Addr = 7'b1000001;
     @(posedge clock);
     we = 1;
+    assign Data = 16'b1111111111111111;
     re = 0;
     @(posedge clock);
     #1 $finish;
