@@ -1,0 +1,70 @@
+{
+    "MlibObjs": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "BarrelShiftRegister_test": [
+            "BarrelShiftRegister_test",
+            "Mynbt",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.12/_prev_archive_1.a",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.12/_195543_archive_1.a",
+                "bytes": 7344,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw8",
+        "default_output_dir": "csrc",
+        "csrc": "csrc",
+        "archive_dir": "archive.12",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/simv.daidir"
+    },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 61752
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "BarrelShiftRegister_test"
+    ],
+    "CompileProcesses": [
+        "cgproc.195543.json"
+    ],
+    "stat": {
+        "nMops": 653
+    }
+}

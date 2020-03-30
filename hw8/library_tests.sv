@@ -273,12 +273,14 @@ module BarrelShiftRegister_test ();
     @(posedge clock);
     en = 0;
     @(posedge clock);
+    load = 0;
     by = 2'b10;
     en = 1;
     @(posedge clock);
-    @(posedge clock);
     load = 1;
     @(posedge clock);
+    @(posedge clock);
+    load = 0;
     by = 2'b11;
     @(posedge clock);
     load = 1;
@@ -295,29 +297,42 @@ module Memory_test();
   logic re, we, clock;
   logic [7:0] Addr;
   tri [15:0] Data;
+  logic en1, en2;
   
   Memory memi (.*);
   initial begin
-    $monitor($time,, "Addr=%d, Data=%d, we=%b, re=%b",
-             Addr, Data, we, re);
+    $monitor($time,, "Addr=%d, Data=%d, we=%b, re=%b, en1=%b",
+             Addr, Data, we, re, en1);
     clock = 0;
     forever #5 clock = ~clock;
   end
-  
+
+  assign Data = (en1) ? 16'b1 : 'z;
+ 
   initial begin
-    we = 1;
-    Addr = 7'b1101101;
-    assign Data = 16'b0000000000000001;
     re = 0;
+    we = 1;
+    en1 = 1;
+    Addr = 7'b1101101;
     @(posedge clock);
+    @(posedge clock);
+    en1 = 0;
     re = 1;
     we = 0;
     @(posedge clock);
+    @(posedge clock);
     Addr = 7'b1000001;
     @(posedge clock);
-    we = 1;
-    assign Data = 16'b1111111111111111;
     re = 0;
+    we = 1;
+    en1 = 1;
+    // Data = 16'b1111111111111111;
+    @(posedge clock);
+    en1 = 0;
+    re = 1;
+    we = 0;
+    @(posedge clock);
+    Addr = 7'b1101101;
     @(posedge clock);
     #1 $finish;
   end
