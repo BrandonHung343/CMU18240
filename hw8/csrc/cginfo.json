@@ -1,0 +1,79 @@
+{
+    "CompileProcesses": [
+        "cgproc.196182.json"
+    ],
+    "NameTable": {
+        "BarrelShiftRegister_test": [
+            "BarrelShiftRegister_test",
+            "Mynbt",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw8",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/simv.daidir",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.13"
+    },
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "BarrelShiftRegister_test": {
+            "Mynbt_d": {
+                "bytes": 19640,
+                "mod": "BarrelShiftRegister_test",
+                "out": "Mynbt_d.o",
+                "mode": 4,
+                "archive": "archive.13/_196182_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.13/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7352,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.13/_196182_archive_1.a"
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 61752
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "BarrelShiftRegister_test"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileStatus": "Successful",
+    "stat": {
+        "nMops": 659
+    }
+}

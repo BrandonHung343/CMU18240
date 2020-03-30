@@ -157,14 +157,15 @@ module BarrelShiftRegister
   logic [DW-1:0] M[W];
   logic [DW-1:0] out;
    
-  assign Data = (re) ? out : 'bz;
+  assign Data = (re) ? out : 'z;
    
   always_ff @(posedge clock)
     if (we)
       M[Addr] <= Data;
       
-  always_comb
+  always_comb begin
     out = M[Addr];
+  end
     
 endmodule: Memory
       

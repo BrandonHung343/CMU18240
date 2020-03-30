@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "BarrelShiftRegister_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "std": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7352,
+            "mode": 4,
+            "archive": "archive.13/_196182_archive_1.a"
+        },
+        "Mynbt_d": {
+            "mod": "BarrelShiftRegister_test",
+            "out": "Mynbt_d.o",
+            "bytes": 19672,
+            "mode": 4,
+            "archive": "archive.13/_196182_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.13/_196182_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7352
+                ],
+                [
+                    "Mynbt_d.o",
+                    19672
+                ]
+            ],
+            "size": 27024
+        }
+    ]
+}
