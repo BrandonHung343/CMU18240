@@ -1,12 +1,47 @@
 {
-    "BarrelShiftRegister_test": [
-        "BarrelShiftRegister_test",
-        "Mynbt",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
+        "module"
+    ],
+    "OnesCount_test": [
+        "OnesCount_test",
+        "wVVHK",
+        "module"
+    ],
+    "Multiplexer": [
+        "Multiplexer",
+        "UxyT3",
+        "module"
+    ],
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
+        "module"
+    ],
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
+    "BarrelShiftRegister": [
+        "BarrelShiftRegister",
+        "ts568",
+        "module"
+    ],
+    "Adder": [
+        "Adder",
+        "xUt1z",
+        "module"
+    ],
+    "Register": [
+        "Register",
+        "kynWL",
+        "module"
+    ],
+    "Memory": [
+        "Memory",
+        "f0K8C",
         "module"
     ],
     "...MASTER...": [

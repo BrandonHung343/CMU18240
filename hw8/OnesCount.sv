@@ -10,18 +10,25 @@ module OnesCount
   logic Sload_L, Sshift_L, Oclr_L;
   logic Oinc_L;
   logic dummy1, dummy2;
+  logic [29:0] shifted;
 
   logic [$clog2(w)-1:0] SC;
 
+  assign lowBit = shifted[0];
+
   fsm #(w) control (.*);
     
-  ShiftRegister #(w) sr (.Q(lowBit), .D(d_in), .clock, .load(~Sload_L), .en(~Sshift_L), .left(1'b0));
+  ShiftRegister #(w) sr (.Q(shifted), .D(d_in), .clock, 
+                         .load(~Sload_L), .en(~Sshift_L), .left(1'b0));
   
-  Counter #($clog2(w)) sc (.clock, .en(1'b1), .D(6'b0), .load(1'b0), .clear(~Cclr_L), .up(~Cinc_L), .Q(SC));
+  Counter #($clog2(w)) sc (.clock, .en(1'b1), .D(5'b0), .load(1'b0), 
+                           .clear(~Cclr_L), .up(~Cinc_L), .Q(SC));
   
-  MagComp #($clog2(w)) cmp (.AltB(dummy1), .AeqB(done), .AgtB(dummy2), .A(SC), .B(5'd30));
+  MagComp #($clog2(w)) cmp (.AltB(dummy1), .AeqB(done), 
+                            .AgtB(dummy2), .A(SC), .B(5'd30));
   
-  Counter #($clog2(w)) oct (.clock, .clear(~Oclr_L), .up(~Oinc_L), .Q(d_out), .en(1'b1), .D(6'b0), .load(1'b0));
+  Counter #($clog2(w)) oct (.clock, .clear(~Oclr_L), .up(~Oinc_L), 
+                     .Q(d_out), .en(1'b1), .D(5'b0), .load(1'b0));
             
 endmodule: OnesCount
 

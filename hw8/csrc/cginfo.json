@@ -1,16 +1,150 @@
 {
-    "CompileProcesses": [
-        "cgproc.196182.json"
+    "CompileStatus": "Successful",
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "Multiplexer": {
+            "UxyT3_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7812,
+                "mod": "Multiplexer",
+                "mode": 4,
+                "out": "UxyT3_d.o"
+            }
+        },
+        "Adder": {
+            "xUt1z_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7492,
+                "mod": "Adder",
+                "mode": 4,
+                "out": "xUt1z_d.o"
+            }
+        },
+        "BarrelShiftRegister": {
+            "ts568_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7571,
+                "mod": "BarrelShiftRegister",
+                "mode": 4,
+                "out": "ts568_d.o"
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7919,
+                "mod": "Decoder",
+                "mode": 4,
+                "out": "t8TcA_d.o"
+            }
+        },
+        "Register": {
+            "kynWL_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7597,
+                "mod": "Register",
+                "mode": 4,
+                "out": "kynWL_d.o"
+            }
+        },
+        "Mux2to1": {
+            "wxUbx_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 6691,
+                "mod": "Mux2to1",
+                "mode": 4,
+                "out": "wxUbx_d.o"
+            }
+        },
+        "Memory": {
+            "f0K8C_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 9389,
+                "mod": "Memory",
+                "mode": 4,
+                "out": "f0K8C_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.25/_29365_archive_1.a",
+                "bytes": 9565,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "OnesCount_test": {
+            "wVVHK_d": {
+                "archive": "archive.25/_29365_archive_1.a",
+                "bytes": 48138,
+                "mod": "OnesCount_test",
+                "out": "wVVHK_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "OnesCount_test"
     ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 63299
+    },
     "NameTable": {
-        "BarrelShiftRegister_test": [
-            "BarrelShiftRegister_test",
-            "Mynbt",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
+            "module"
+        ],
+        "OnesCount_test": [
+            "OnesCount_test",
+            "wVVHK",
+            "module"
+        ],
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
+            "module"
+        ],
+        "Mux2to1": [
+            "Mux2to1",
+            "wxUbx",
+            "module"
+        ],
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
+            "module"
+        ],
+        "Adder": [
+            "Adder",
+            "xUt1z",
+            "module"
+        ],
+        "Register": [
+            "Register",
+            "kynWL",
+            "module"
+        ],
+        "Memory": [
+            "Memory",
+            "f0K8C",
             "module"
         ],
         "...MASTER...": [
@@ -19,61 +153,25 @@
             "module"
         ]
     },
-    "CurCompileUdps": {},
-    "Misc": {
-        "csrc": "csrc",
-        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw8",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/csrc",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/simv.daidir",
-        "daidir": "simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.13"
-    },
-    "MlibObjs": {},
-    "PrevCompiledModules": {
-        "BarrelShiftRegister_test": {
-            "Mynbt_d": {
-                "bytes": 19640,
-                "mod": "BarrelShiftRegister_test",
-                "out": "Mynbt_d.o",
-                "mode": 4,
-                "archive": "archive.13/_196182_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "mod": "std",
-                "mode": 4,
-                "archive": "archive.13/_prev_archive_1.a",
-                "out": "reYIK_d.o"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 7352,
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "mode": 4,
-                "archive": "archive.13/_196182_archive_1.a"
-            }
-        }
-    },
     "CompileStrategy": "fullobj",
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 61752
-    },
-    "CurCompileModules": [
-        "...MASTER...",
-        "BarrelShiftRegister_test"
-    ],
+    "CurCompileUdps": {},
     "LVLData": [
         "SIM"
     ],
+    "CompileProcesses": [
+        "cgproc.29365.json"
+    ],
     "PEModules": [],
-    "CompileStatus": "Successful",
     "stat": {
-        "nMops": 659
+        "nMops": 2629
+    },
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw8",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw8/simv.daidir",
+        "archive_dir": "archive.25"
     }
 }

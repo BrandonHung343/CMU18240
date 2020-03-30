@@ -1,0 +1,49 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "OnesCount_test": {
+            "Compiled Times": 3,
+            "Compiled": "Yes"
+        },
+        "Multiplexer": {},
+        "Mux2to1": {},
+        "Decoder": {},
+        "Adder": {},
+        "Register": {},
+        "BarrelShiftRegister": {},
+        "Memory": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.25/_29365_archive_1.a",
+            "bytes": 9565,
+            "mode": 4
+        },
+        "wVVHK_d": {
+            "mod": "OnesCount_test",
+            "out": "wVVHK_d.o",
+            "archive": "archive.25/_29365_archive_1.a",
+            "bytes": 46852,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.25/_29365_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9565
+                ],
+                [
+                    "wVVHK_d.o",
+                    46852
+                ]
+            ],
+            "size": 56417
+        }
+    ]
+}
