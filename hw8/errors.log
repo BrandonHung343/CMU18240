@@ -1,0 +1,56 @@
+********************************************************************************
+*                                  18240: hw8                                  *
+*                             Error log for: bhung                             *
+********************************************************************************
+********************************** Problem 1 ***********************************
+library.sv, library_tests.sv: failed to compile
+Doing common elaboration 
+
+Error-[IIPCND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw8/library_tests.sv, 157
+  Identifier 'clk' is not declared in implicit port connection instantiation.
+
+1 error
+
+ common elaboration failed
+
+library.sv, library_tests.sv: failed to compile
+Doing common elaboration 
+
+Error-[IIPCND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw8/library_tests.sv, 206
+  Identifier 'clk' is not declared in implicit port connection instantiation.
+
+1 error
+
+ common elaboration failed
+
+library.sv, library_tests.sv: failed to compile
+Doing common elaboration 
+
+Error-[IIPCND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw8/library_tests.sv, 254
+  Identifier 'clk' is not declared in implicit port connection instantiation.
+
+1 error
+
+ common elaboration failed
+
+library.sv, library_tests.sv: failed to compile
+Doing common elaboration 
+
+Error-[IIPCND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw8/library_tests.sv, 302
+  Identifier 'clk' is not declared in implicit port connection instantiation.
+
+
+Error-[IIPCND] Identifier not declared
+/afs/ece.cmu.edu/usr/bhung/Private/hw8/library_tests.sv, 302
+  Identifier 'Address' is not declared in implicit port connection 
+  instantiation.
+
+2 errors
+
+ common elaboration failed
+
+

@@ -103,15 +103,15 @@ module Register_test ();
   //`define 3 3
   logic [2:0] D, Q;
   logic en, clear;
-  logic clock, reset_L;
+  logic clk, reset_L;
   
   Register #(3) regis (.*);
   
   initial begin
     $monitor($time,, "Q=%d, D=%d, en=%d, clear=%b",
             Q, D, en, clear);
-    clock = 0;
-    forever #5 clock = ~clock;
+    clk = 0;
+    forever #5 clk = ~clk;
   end
    
   initial begin
@@ -119,30 +119,30 @@ module Register_test ();
     en = 0;
     clear = 0;
     reset_L <= 0;
-    @(posedge clock); 
+    @(posedge clk); 
     reset_L <= 1;
-    @(posedge clock); 
+    @(posedge clk); 
     D = 3'b100;
-  // reset is synchronous, so must wait for a clock edge
-    @(posedge clock); 
+  // reset is synchronous, so must wait for a clk edge
+    @(posedge clk); 
     en = 1;
-    @(posedge clock); 
+    @(posedge clk); 
     D = 3'b010; 
-    @(posedge clock);
+    @(posedge clk);
     D = 3'b011;
     clear = 1;
-    @(posedge clock);
+    @(posedge clk);
     en = 0;
-    @(posedge clock);
+    @(posedge clk);
     clear = 0;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     D = 3'b111;
     en = 1;
-    @(posedge clock);
+    @(posedge clk);
     D = 3'b101;
     en = 0;
-    @(posedge clock);
+    @(posedge clk);
     #1 $finish;
   end
       
@@ -151,7 +151,7 @@ endmodule: Register_test
 module Counter_test ();
   // WIDTH = 6
   logic en, clear, load, up;
-  logic clock;
+  logic clk;
   logic [5:0] D, Q;
 
   Counter #(6) counti (.*);
@@ -160,8 +160,8 @@ module Counter_test ();
     $monitor($time,, "Q=%d, D=%d, en=%d, clear=%b \
                       load=%b, up=%b",
              Q, D, en, clear, load, up);
-    clock = 0;
-    forever #5 clock = ~clock;
+    clk = 0;
+    forever #5 clk = ~clk;
   end
   
  
@@ -171,20 +171,20 @@ module Counter_test ();
     load = 0;
     up = 0;
     D = 6'b011101;
-    @(posedge clock);
+    @(posedge clk);
     en = 1;
     load = 1;
-    @(posedge clock);
+    @(posedge clk);
     load = 0;
     up = 1;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     clear = 1;
-    @(posedge clock);
+    @(posedge clk);
     clear = 0;
-    @(posedge clock);
+    @(posedge clk);
     load = 1;
-    @(posedge clock);
+    @(posedge clk);
     #1 $finish;
   end
     
@@ -193,14 +193,14 @@ endmodule: Counter_test
 module ShiftRegister_test ();
   // WIDTH = 9
   logic en, load, left;
-  logic clock;
+  logic clk;
   logic [8:0] D, Q;
   
   initial begin
     $monitor($time,, "Q=%d, D=%d, en=%d, load=%b, left=%b",
              Q, D, en, load, left);
-    clock = 0;
-    forever #5 clock = ~clock;
+    clk = 0;
+    forever #5 clk = ~clk;
   end
   
   ShiftRegister #(9) shifti (.*);
@@ -211,27 +211,27 @@ module ShiftRegister_test ();
     load = 0;
     // up = 0;
     D = 9'b00000001;
-    @(posedge clock);
+    @(posedge clk);
     en = 1;
     load = 1;
     left = 1;
-    @(posedge clock);
+    @(posedge clk);
     load = 0;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     left = 0;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     en = 0;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     load = 1;
     en = 1;
     left = 1;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     left = 0;
-    @(posedge clock);
+    @(posedge clk);
     #1 $finish;
   end
     
@@ -239,15 +239,15 @@ endmodule: ShiftRegister_test
     
 module BarrelShiftRegister_test (); 
   // WIDTH = 5
-  logic load, en, clock;
+  logic load, en, clk;
   logic [1:0] by;
   logic [4:0] D, Q;
   
   initial begin
     $monitor($time,, "Q=%d, D=%d, en=%d, load=%b, by=%d",
              Q, D, en, load, by);
-    clock = 0;
-    forever #5 clock = ~clock;
+    clk = 0;
+    forever #5 clk = ~clk;
   end
   
   
@@ -259,52 +259,52 @@ module BarrelShiftRegister_test ();
     load = 0;
     // up = 0;
     D = 5'b00001;
-    @(posedge clock);
+    @(posedge clk);
     en = 1;
     load = 1;
-    @(posedge clock);
+    @(posedge clk);
     load = 0;
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
     load = 1;
-    @(posedge clock);
+    @(posedge clk);
     en = 0;
-    @(posedge clock);
+    @(posedge clk);
     load = 0;
     by = 2'b10;
     en = 1;
-    @(posedge clock);
+    @(posedge clk);
     load = 1;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     load = 0;
     by = 2'b11;
-    @(posedge clock);
+    @(posedge clk);
     load = 1;
-    @(posedge clock);
+    @(posedge clk);
     by = 2'b00;
-    @(posedge clock);
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
     #1 $finish;
   end
     
 endmodule: BarrelShiftRegister_test
   
 module Memory_test();
-  logic re, we, clock;
-  logic [7:0] Addr;
+  logic re, we, clk;
+  logic [7:0] Address;
   tri [15:0] Data;
   logic en1, en2;
   
   Memory memi (.*);
   initial begin
-    $monitor($time,, "Addr=%d, Data=%d, we=%b, re=%b, en1=%b",
-             Addr, Data, we, re, en1);
-    clock = 0;
-    forever #5 clock = ~clock;
+    $monitor($time,, "Address=%d, Data=%d, we=%b, re=%b, en1=%b",
+             Address, Data, we, re, en1);
+    clk = 0;
+    forever #5 clk = ~clk;
   end
 
   assign Data = (en1) ? 16'b1 : 'z;
@@ -313,27 +313,27 @@ module Memory_test();
     re = 0;
     we = 1;
     en1 = 1;
-    Addr = 7'b1101101;
-    @(posedge clock);
-    @(posedge clock);
+    Address = 7'b1101101;
+    @(posedge clk);
+    @(posedge clk);
     en1 = 0;
     re = 1;
     we = 0;
-    @(posedge clock);
-    @(posedge clock);
-    Addr = 7'b1000001;
-    @(posedge clock);
+    @(posedge clk);
+    @(posedge clk);
+    Address = 7'b1000001;
+    @(posedge clk);
     re = 0;
     we = 1;
     en1 = 1;
     // Data = 16'b1111111111111111;
-    @(posedge clock);
+    @(posedge clk);
     en1 = 0;
     re = 1;
     we = 0;
-    @(posedge clock);
-    Addr = 7'b1101101;
-    @(posedge clock);
+    @(posedge clk);
+    Address = 7'b1101101;
+    @(posedge clk);
     #1 $finish;
   end
   

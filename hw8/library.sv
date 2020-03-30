@@ -101,11 +101,11 @@ endmodule: Register
 module Counter
   #(parameter WIDTH = 1)
    (input logic en, clear, load, up,
-    input logic clock,
+    input logic clk,
     input logic [WIDTH-1:0] D,
     output logic [WIDTH-1:0] Q);
     
-  always_ff @(posedge clock)
+  always_ff @(posedge clk)
     if (clear && en)
       Q <= 0;
     else if (load && en)
@@ -117,11 +117,11 @@ endmodule: Counter
 module ShiftRegister
   #(parameter WIDTH = 1)
    (input logic en, left, load,
-    input logic clock,
+    input logic clk,
     input logic [WIDTH-1:0] D, 
     output logic [WIDTH-1:0] Q);
     
-  always_ff @(posedge clock)
+  always_ff @(posedge clk)
     if (load)
       Q <= D;
     else if (en && left)
@@ -136,10 +136,10 @@ module BarrelShiftRegister
    (input logic load, en, 
     input logic [1:0] by,
     input logic [WIDTH-1:0] D,
-    input logic clock,
+    input logic clk,
     output logic [WIDTH-1:0] Q);
     
-  always_ff @(posedge clock)
+  always_ff @(posedge clk)
     if (load)
       Q <= D;
     else if (en)
@@ -150,8 +150,8 @@ module BarrelShiftRegister
   #(parameter DW = 16,
               W = 256,
               AW = $clog2(W))
-   (input logic re, we, clock,
-    input logic [AW-1:0] Addr,
+   (input logic re, we, clk,
+    input logic [AW-1:0] Address,
     inout tri   [DW-1:0] Data);
     
   logic [DW-1:0] M[W];
@@ -159,12 +159,12 @@ module BarrelShiftRegister
    
   assign Data = (re) ? out : 'z;
    
-  always_ff @(posedge clock)
+  always_ff @(posedge clk)
     if (we)
-      M[Addr] <= Data;
+      M[Address] <= Data;
       
   always_comb begin
-    out = M[Addr];
+    out = M[Address];
   end
     
 endmodule: Memory
