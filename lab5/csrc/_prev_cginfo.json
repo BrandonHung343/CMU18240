@@ -1,106 +1,96 @@
 {
-    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
     "PEModules": [],
     "MlibObjs": {},
     "PrevCompiledModules": {
         "Multiplexer": {
             "UxyT3_d": {
                 "bytes": 7812,
-                "out": "UxyT3_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
+                "archive": "archive.69/_prev_archive_1.a",
                 "mod": "Multiplexer",
-                "mode": 4
+                "mode": 4,
+                "out": "UxyT3_d.o"
             }
         },
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "out": "reYIK_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "std",
-                "mode": 4
+        "ShiftRegister": {
+            "WB1J1_d": {
+                "bytes": 7515,
+                "archive": "archive.69/_prev_archive_1.a",
+                "mod": "ShiftRegister",
+                "mode": 4,
+                "out": "WB1J1_d.o"
             }
         },
-        "lab5p1_test": {
-            "R7SEZ_d": {
-                "bytes": 45473,
-                "archive": "archive.61/_216397_archive_1.a",
-                "out": "R7SEZ_d.o",
-                "mod": "lab5p1_test",
+        "BarrelShiftRegister": {
+            "ts568_d": {
+                "bytes": 7571,
+                "archive": "archive.69/_prev_archive_1.a",
+                "mod": "BarrelShiftRegister",
+                "mode": 4,
+                "out": "ts568_d.o"
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "bytes": 7919,
+                "archive": "archive.69/_prev_archive_1.a",
+                "mod": "Decoder",
+                "mode": 4,
+                "out": "t8TcA_d.o"
+            }
+        },
+        "Register": {
+            "kynWL_d": {
+                "bytes": 7597,
+                "archive": "archive.69/_prev_archive_1.a",
+                "mod": "Register",
+                "mode": 4,
+                "out": "kynWL_d.o"
+            }
+        },
+        "lab5p2_test": {
+            "gh4Fk_d": {
+                "bytes": 47675,
+                "archive": "archive.69/_154297_archive_1.a",
+                "mod": "lab5p2_test",
+                "out": "gh4Fk_d.o",
                 "mode": 4
             }
         },
         "Adder": {
             "xUt1z_d": {
                 "bytes": 7492,
-                "out": "xUt1z_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
+                "archive": "archive.69/_prev_archive_1.a",
                 "mod": "Adder",
-                "mode": 4
+                "mode": 4,
+                "out": "xUt1z_d.o"
             }
         },
-        "BarrelShiftRegister": {
-            "ts568_d": {
-                "bytes": 7571,
-                "out": "ts568_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "BarrelShiftRegister",
-                "mode": 4
-            }
-        },
-        "Decoder": {
-            "t8TcA_d": {
-                "bytes": 7919,
-                "out": "t8TcA_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "Decoder",
-                "mode": 4
-            }
-        },
-        "Register": {
-            "kynWL_d": {
-                "bytes": 7597,
-                "out": "kynWL_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "Register",
-                "mode": 4
-            }
-        },
-        "Mux2to1": {
-            "wxUbx_d": {
-                "bytes": 6691,
-                "out": "wxUbx_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "Mux2to1",
-                "mode": 4
-            }
-        },
-        "ShiftRegister": {
-            "WB1J1_d": {
-                "bytes": 7515,
-                "out": "WB1J1_d.o",
-                "archive": "archive.61/_prev_archive_1.a",
-                "mod": "ShiftRegister",
-                "mode": 4
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "archive": "archive.69/_prev_archive_1.a",
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "bytes": 9559,
-                "archive": "archive.61/_216397_archive_1.a",
-                "out": "amcQw_d.o",
+                "bytes": 9397,
+                "archive": "archive.69/_154297_archive_1.a",
                 "mod": "...MASTER...",
+                "out": "amcQw_d.o",
                 "mode": 4
             }
         }
     },
-    "stat": {
-        "nMops": 3625
-    },
     "NameTable": {
-        "Decoder": [
-            "Decoder",
-            "t8TcA",
+        "std": [
+            "std",
+            "reYIK",
             "module"
         ],
         "BarrelShiftRegister": [
@@ -108,29 +98,19 @@
             "ts568",
             "module"
         ],
-        "lab5p1_test": [
-            "lab5p1_test",
-            "R7SEZ",
-            "module"
-        ],
-        "std": [
-            "std",
-            "reYIK",
-            "module"
-        ],
-        "Adder": [
-            "Adder",
-            "xUt1z",
-            "module"
-        ],
         "Multiplexer": [
             "Multiplexer",
             "UxyT3",
             "module"
         ],
-        "Mux2to1": [
-            "Mux2to1",
-            "wxUbx",
+        "ShiftRegister": [
+            "ShiftRegister",
+            "WB1J1",
+            "module"
+        ],
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
             "module"
         ],
         "Register": [
@@ -138,9 +118,14 @@
             "kynWL",
             "module"
         ],
-        "ShiftRegister": [
-            "ShiftRegister",
-            "WB1J1",
+        "Adder": [
+            "Adder",
+            "xUt1z",
+            "module"
+        ],
+        "lab5p2_test": [
+            "lab5p2_test",
+            "gh4Fk",
             "module"
         ],
         "...MASTER...": [
@@ -149,29 +134,30 @@
             "module"
         ]
     },
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.154297.json"
+    ],
     "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "lab5p1_test"
+        "lab5p2_test"
     ],
-    "Misc": {
-        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/simv.daidir",
-        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab5",
-        "csrc": "csrc",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/csrc",
-        "archive_dir": "archive.61",
-        "daidir": "simv.daidir",
-        "default_output_dir": "csrc"
-    },
-    "CompileStrategy": "fullobj",
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 66997
+        "bytes": 68765
     },
-    "LVLData": [
-        "SIM"
-    ],
-    "CompileProcesses": [
-        "cgproc.216397.json"
-    ]
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab5",
+        "archive_dir": "archive.69",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/csrc",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "stat": {
+        "nMops": 3812
+    },
+    "CompileStatus": "Successful"
 }

@@ -45,7 +45,7 @@ endmodule: Multiplexer
 
 module Mux2to1
   // input width
-  # (parameter WIDTH = 1)
+  # (parameter WIDTH = 2)
   (input logic [WIDTH-1:0] I0, I1,
    input logic S,
    output logic [WIDTH-1:0] Y);
@@ -164,7 +164,7 @@ module MemoryNucs
       M[Addr] <= Data;
       
   initial
-    $readmemb("T1_1_N.nuc", M);
+    $readmemb("attempt1.nuc", M);
       
   always_comb
     out = M[Addr];

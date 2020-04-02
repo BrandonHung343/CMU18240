@@ -1,0 +1,48 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "ShiftRegister": {},
+        "std": {},
+        "Multiplexer": {},
+        "Decoder": {},
+        "Adder": {},
+        "Register": {},
+        "BarrelShiftRegister": {},
+        "lab5p2_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 8
+        }
+    },
+    "CompUnits": {
+        "gh4Fk_d": {
+            "out": "gh4Fk_d.o",
+            "mod": "lab5p2_test",
+            "bytes": 47675,
+            "mode": 4,
+            "archive": "archive.70/_155202_archive_1.a"
+        },
+        "amcQw_d": {
+            "out": "amcQw_d.o",
+            "mod": "...MASTER...",
+            "bytes": 9397,
+            "mode": 4,
+            "archive": "archive.70/_155202_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.70/_155202_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9397
+                ],
+                [
+                    "gh4Fk_d.o",
+                    47675
+                ]
+            ],
+            "size": 57072
+        }
+    ]
+}
