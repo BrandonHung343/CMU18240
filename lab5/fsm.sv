@@ -14,7 +14,8 @@ module fsm
                      compThreeSec = 4'b0110, compThreeThird = 4'b0111,
                      zeroMatchAll = 4'b1100, oneMatchAll = 4'b1101,
                      zeroMatchUpTo = 4'b1000, oneMatchUpTo = 4'b1001,
-                     doneOneLeft = 4'b1010, doneTwoLeft = 4'b1011}
+                     doneOneLeft = 4'b1010, doneTwoLeft = 4'b1011,
+                     incLetPat = 4'b1100, incPat = 4'b1101, error = 4'b1111}
                      state, nextState;
                      
    // next state logic
@@ -27,9 +28,11 @@ module fsm
       readLetPat : nextState = checkPattern;
       checkPattern : begin
                        if (fsm_notif == 0)
-                         nextState = readLetPat;
+                         nextState = incLetPat;
                        else if (fsm_notif == 1) // no matches
                          nextState = start;
+                       else if (fsm_notif == 2)
+                         nextState = error;
                        else if (fsm_notif == 3)
                          nextState = compTwoFirst;
                        else if (fsm_notif == 4)
@@ -65,6 +68,8 @@ module fsm
                                  ? oneMatchUpTo : readLetPat; // good
       doneOneLeft : nextState = readLetPat;
       doneTwoLeft : nextState = doneOneLeft;
+      incLetPat: nextState = readLetPat;
+      default : nextState = start;
     endcase
    end
 
@@ -81,7 +86,62 @@ module fsm
     done = 0;
     found_it = 0;
     error = 0;
-    if (nextState == start && fsm_notif == 2)
+    en_wc = 0;
+    cl_wc = 0;
+    en_pc = 0;
+    cl_pc = 0;
+    en_lc = 0;
+    cl_lc = 0;
+ 
+       if (state == start)
+          begin
+            en_wc = 1;
+            en_pc = 1;
+            cl_wc = 1;
+            cl_pc = 1;
+            en_lc = 1;
+            cl_lc = 1;
+            re_p = 0;
+            re_s = 0;
+          end
+        
+        else if (state == readLetPat)
+          begin
+            re_s = 1;
+            re_p = 1;
+            en_wc = 0;
+            en_pc = 0;
+            cl_wc = 0;
+            cl_pc = 0;
+            en_lc = 0;
+            cl_lc = 0;
+         end
+        
+        else if (state == checkPattern)
+          begin
+            en_wc = 0;
+            cl_wc = 0;
+            en_pc = 0;
+            cl_pc = 0;
+            en_lc = 0;
+            cl_lc = 0;
+            re_p = 1;
+            re_s = 1;
+          end
+
+        else if (state == incLetPat)
+          begin
+            en_wc = 1;
+            cl_wc = 0;
+            en_pc = 1;
+            cl_pc = 0;
+            en_lc = 0;
+            cl_lc = 0;
+            re_p = 0;
+            re_s = 0;
+          end
+
+        else if (state == error)
       begin
         en_wc = 0;
         cl_wc = 0;
@@ -95,69 +155,12 @@ module fsm
         found_it = 0;
         error = 1;
       end
-    else if (nextState == start && fsm_notif == 1)
-      begin
-        en_wc = 0;
-        cl_wc = 0;
-        en_pc = 0;
-        cl_pc = 0;
-        en_lc = 0;
-        cl_lc = 0;
-        re_p = 0;
-        re_s = 0;
-        done = 1;
-        found_it = 0;
-        error = 0;
-      end
-    else 
+
+   else 
       begin // needs match at end
-        if (state == start)
-          begin
-            if (ready == 1)
-              begin
-                en_wc = 1;
-                en_pc = 1;
-                cl_wc = 1;
-                cl_pc = 1;
-                en_lc = 1;
-                cl_lc = 1;
-                re_p = 0;
-                re_s = 0;
-              end
-            else
-              begin
-                en_wc = 0;
-                en_pc = 0;
-                cl_wc = 0;
-                cl_pc = 0;
-                en_lc = 0;
-                cl_lc = 0;
-                re_p = 0;
-                re_s = 0;
-              end
-          end
         
-        else if (state == readLetPat)
-          begin
-            re_s = 1;
-            re_p = 1;
-            cl_wc = 0;
-            cl_pc = 0;
-          end
-        
-        else if (state == checkPattern)
-          begin
-            if (nextState == readLetPat)
-              begin // done, matched, increment word and pattern
-                en_wc = 1;
-                cl_wc = 0;
-                en_pc = 1;
-                cl_pc = 0;
-                en_lc = 0;
-                cl_lc = 0;
-                re_p = 1;
-                re_s = 1;
-              end
+
+           begin 
             else if (nextState == compTwoFirst || nextState == compThreeFirst)
               begin // found a /, increment pattern to figure out next word
                 en_wc = 0;

@@ -164,7 +164,7 @@ module MemoryNucs
       M[Addr] <= Data;
       
   initial
-    $readmemb("nucFile.nuc", M);
+    $readmemb("attempt3(6).nuc", M);
       
   always_comb
     out = M[Addr];
@@ -189,7 +189,7 @@ module MemoryPattern
       M[Addr] <= Data;
       
   initial
-    $readmemb("patternFile.gpatt", M);
+    $readmemh("attempt1.gpatt", M);
       
   always_comb
     out = M[Addr];

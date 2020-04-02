@@ -15,8 +15,8 @@ module PatternChecker
    // how_much only active for exactlyN, upTo 
    
   always_comb
-    unique casez (pattern)
-      6'h0 : fsm_notif = 3'b111;
+   casez (pattern)
+      6'h00 : fsm_notif = 3'b111;
       6'h10 : fsm_notif = (nuc == 2'b00) ? 3'b000 : 3'b001;
       6'h11 : fsm_notif = (nuc == 2'b01) ? 3'b000 : 3'b001;
       6'h12 : fsm_notif = (nuc == 2'b10) ? 3'b000 : 3'b001;

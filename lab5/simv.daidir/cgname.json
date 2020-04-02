@@ -4,14 +4,14 @@
         "reYIK",
         "module"
     ],
-    "Decoder": [
-        "Decoder",
-        "t8TcA",
+    "Adder": [
+        "Adder",
+        "xUt1z",
         "module"
     ],
-    "lab5p1": [
-        "lab5p1",
-        "ZGY06",
+    "Register": [
+        "Register",
+        "kynWL",
         "module"
     ],
     "Multiplexer": [
@@ -24,24 +24,24 @@
         "wxUbx",
         "module"
     ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
-        "module"
-    ],
-    "Register": [
-        "Register",
-        "kynWL",
-        "module"
-    ],
-    "ShiftRegister": [
-        "ShiftRegister",
-        "WB1J1",
+    "lab5p1_test": [
+        "lab5p1_test",
+        "R7SEZ",
         "module"
     ],
     "BarrelShiftRegister": [
         "BarrelShiftRegister",
         "ts568",
+        "module"
+    ],
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
+    "ShiftRegister": [
+        "ShiftRegister",
+        "WB1J1",
         "module"
     ],
     "...MASTER...": [
