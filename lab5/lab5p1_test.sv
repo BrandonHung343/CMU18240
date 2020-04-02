@@ -26,7 +26,7 @@ module lab5p1_test ();
   
   initial begin
     reset_N = 0;
-    dna_length = 6;
+    dna_length = 45;
     ready = 0;
     @(posedge clock);
     reset_N = 1;
@@ -35,6 +35,8 @@ module lab5p1_test ();
     @(posedge clock);
     ready = 0;
     wait(done);
+    @(posedge clock);
+    @(posedge clock);
     @(posedge clock);
     $finish;
    end
