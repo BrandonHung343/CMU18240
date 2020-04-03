@@ -27,7 +27,7 @@ module lab5p2_test ();
   
   initial begin
     reset_N = 0;
-    dna_start = 0;
+    dna_start = 1;
     pattern_start = 10;
     dna_length = 45;
     ready = 0;

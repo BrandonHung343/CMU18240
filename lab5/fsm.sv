@@ -51,17 +51,54 @@ module fsm
                        else if (fsm_notif == 7)
                          nextState = good;
                      end
-                      
-      compTwoFirst : nextState = (fsm_notif == 0) ? doneOneLeft: incPat22;
-      compTwoSec : nextState = (fsm_notif == 0) ? incLetPat : endNoGood; //bad
-      
-      compThreeFirst : nextState = 
-                      (fsm_notif == 0) ? doneTwoLeft : incPat32;
-      compThreeSec : nextState = 
-                    (fsm_notif == 0) ? doneOneLeft : incPat33;
-      compThreeThird : nextState = 
-                    (fsm_notif == 0) ? readLetPat : endNoGood; // bad
-                    
+     validPatternCheck1: begin 
+                          if (fsm_notif == 7 ||
+                              fsm_notif ==                  
+     compTwoFirst : begin
+                     if (fsm_notif == 7) 
+                       nextState = Error;
+                     else if (fsm_notif == 0) 
+                       nextState = doneOneLeft;
+                     else
+                       nextState = incPat22; //bad
+                    end
+
+     compTwoSec : begin
+                     if (fsm_notif == 7) 
+                       nextState = Error;
+                     else if (fsm_notif == 0) 
+                       nextState = incLetPat;
+                     else
+                       nextState = endNoGood; //bad
+                   end
+
+      compThreeFirst : begin
+                         if (fsm_notif == 7) 
+                           nextState = Error;
+                         else if (fsm_notif == 0) 
+                           nextState = doneTwoLeft;
+                         else
+                           nextState = incPat32; //bad
+                       end
+
+      compThreeSec : begin
+                         if (fsm_notif == 7) 
+                           nextState = Error;
+                         else if (fsm_notif == 0) 
+                           nextState = doneOneLeft;
+                         else
+                           nextState = incPat33; //bad
+                       end
+
+      compThreeThird : begin
+                         if (fsm_notif == 7) 
+                           nextState = Error;
+                         else if (fsm_notif == 0) 
+                           nextState = incLetPat;
+                         else
+                           nextState = endNoGood; //bad
+                       end
+                   
       incPatAll : nextState = oneMatchAll;              
       oneMatchAll : begin
                       if (fsm_notif == 0 && len_reached == 0)
@@ -124,6 +161,7 @@ module fsm
     cl_pc = 0;
     en_lc = 0;
     cl_lc = 0;
+    //en_fc = 0;
  
     if (state == start)
       begin

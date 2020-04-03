@@ -9,9 +9,9 @@
         "UxyT3",
         "module"
     ],
-    "Decoder": [
-        "Decoder",
-        "t8TcA",
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
         "module"
     ],
     "Adder": [
@@ -19,14 +19,14 @@
         "xUt1z",
         "module"
     ],
-    "Register": [
-        "Register",
-        "kynWL",
+    "BarrelShiftRegister": [
+        "BarrelShiftRegister",
+        "ts568",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
         "module"
     ],
     "ShiftRegister": [
@@ -34,14 +34,19 @@
         "WB1J1",
         "module"
     ],
-    "BarrelShiftRegister": [
-        "BarrelShiftRegister",
-        "ts568",
+    "Register": [
+        "Register",
+        "kynWL",
         "module"
     ],
-    "lab5p2_test": [
-        "lab5p2_test",
-        "gh4Fk",
+    "lab5p1_test": [
+        "lab5p1_test",
+        "R7SEZ",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }

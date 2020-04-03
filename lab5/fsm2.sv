@@ -61,7 +61,7 @@ module fsm2
       compThreeSec : nextState = 
                     (fsm_notif == 0) ? doneOneLeft : incPat33;
       compThreeThird : nextState = 
-                    (fsm_notif == 0) ? readLetPat : endNoGood; // bad
+                    (fsm_notif == 0) ? incLetPat : endNoGood; // bad
                     
       incPatAll : nextState = oneMatchAll;              
       oneMatchAll : begin
