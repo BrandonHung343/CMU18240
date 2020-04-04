@@ -16,14 +16,17 @@ module lab5p1
    logic lenLt, lenEq, lenGt;
    logic [15:0] WordCount;
    logic [11:0] PatternCount;
-   logic [3:0] LetterCount;
+   logic [3:0] LetterCount, patternSignal;
+   logic [15:0] checkPatAhead, MuxedPatCount;
+   logic sel_tmp, ld_tmp, cl_tmp, en_tmp;
+  
    
    fsm FSM (.*);
    
    MemoryNucs Seq_Mem (.re(re_s), .we(1'b0), .clock,
                                       .Addr(WordCount), .Data(nuc));
    MemoryPattern Pattern_Mem (.re(re_p), .we(1'b0), .clock,
-                      .Addr(PatternCount), .Data(pattern));
+                      .Addr(MuxedPatCount), .Data(pattern));
                       
    PatternChecker PatCheck (.*);
    
@@ -38,12 +41,26 @@ module lab5p1
    Counter #(4) LetterCounter (.en(en_lc), .clear(cl_lc), .load(1'b0),
                                .up(1'b1), .clock, 
                                .D(LetterCount), .Q(LetterCount));
+                               
+   Counter #(12) CheckAheadCounter (.en(en_tmp), .clear(cl_tmp), .load(ld_tmp),
+                                    .up(1'b1), .clock, .D(checkPatAhead), 
+                                    .Q(checkPatAhead));
+                               
    
    MagComp #(16) WordComp (.A(WordCount), .B(dna_length), 
                            .AltB(seqLt), .AeqB(seqEq), .AgtB(seqGt));
    
    MagComp #(4) LetterComp (.A(LetterCount), .B(how_much),   
                             .AltB(lenLt), .AeqB(lenEq), .AgtB(lenGt));
+                           
+   Mux2to1 #(12) PatCountLoadMux (.S(ld_tmp), .I0(12'b0), .I1(PatternCount),
+                              .Y(checkPatAhead));
+                              
+   Mux2to1 #(12) PatCountMux (.S(sel_tmp), .I0(PatternCount), .I1(checkPatAhead),
+                              .Y(MuxedPatCount));
+                              
+                            
+                            
    
    assign len_reached = (lenEq) ? 1'b1 : 1'b0;
    assign end_seq = (seqEq) ? 1'b1 : 1'b0;
