@@ -18,7 +18,7 @@ module PatternChecker
    //                 upTo = 3'b110, end = 3'b111;
    // how_much only active for exactlyN, upTo 
    
-  always_comb
+  always_comb begin
     patternSignal = 3'b111;
     casez (pattern)
       6'h00 : fsm_notif = 3'b111;
@@ -51,6 +51,7 @@ module PatternChecker
               end
       default : fsm_notif = 3'b010;
     endcase
+  end
     
 endmodule: PatternChecker
       

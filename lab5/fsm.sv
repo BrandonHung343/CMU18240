@@ -30,7 +30,8 @@ module fsm
                      seenCG3 = 6'b101001, seenTG3 = 6'b101010,
                      seenA3 = 6'b101011, seenC3 = 6'b101100,
                      seenT3 = 6'b101101, seenG3 = 6'b101110,
-                     check21 = 6'b111001, check31 = 6'b111010}
+                     check21 = 6'b111001, check31 = 6'b111010,
+                     loadTmp2 = 6'b111011, loadTmp3 = 6'b111100}
                      state, nextState;
                      
    // next state logic
@@ -60,10 +61,7 @@ module fsm
                        else if (fsm_notif == 7)
                          nextState = good;
                      end
-     validPatternCheck1: begin 
-                          if (fsm_notif == 7 ||
-                              fsm_notif ==                  
-     compTwoFirst : begin
+    compTwoFirst : begin
                      if (fsm_notif == 7) 
                        nextState = Error;
                      else if (fsm_notif == 0) 
@@ -139,221 +137,224 @@ module fsm
       
       incLetPat : nextState = readLetPat;
       
-      incPat21 : nextState = check21;
+      incPat21 : nextState = loadTmp2;
       incPat22 : nextState = compTwoSec;
-      incPat31 : nextState = check31;
+      incPat31 : nextState = loadTmp3;
       incPat32 : nextState = compThreeSec;
       incPat33 : nextState = compThreeThird;
+
+      loadTmp2 : nextState = check21;
+      loadTmp3 : nextState = check31;
       
       // A = 3'b000, C = 3'b001, T = 3'b010, G = 3'b011, 
       // other = 3'b111
       check21 : begin
                   if (patternSignal == 0) // A
-                    nextState == seenA2;
+                    nextState = seenA2;
                   else if (patternSignal == 1) // C
-                    nextState == seenC2;
+                    nextState = seenC2;
                   else if (patternSignal == 2) // T
-                    nextState == seenT2;
+                    nextState = seenT2;
                   else if (patternSignal == 3) // G
-                    nextState == seenG2;
+                    nextState = seenG2;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                   
       check31 : begin
                   if (patternSignal == 0) // A
-                    nextState == seenA3;
+                    nextState = seenA3;
                   else if (patternSignal == 1) // C
-                    nextState == seenC3;
+                    nextState = seenC3;
                   else if (patternSignal == 2) // T
-                    nextState == seenT3;
+                    nextState = seenT3;
                   else if (patternSignal == 3) // G
-                    nextState == seenG3;
+                    nextState = seenG3;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenA2 : begin
                   if (patternSignal == 0) // A
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 1) // C
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 2) // T
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 3) // G
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenC2 : begin
                   if (patternSignal == 0) // A
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 1) // C
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 2) // T
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 3) // G
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenT2 : begin
                   if (patternSignal == 0) // A
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 1) // C
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 2) // T
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 3) // G
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenG2 : begin
                   if (patternSignal == 0) // A
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 1) // C
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 2) // T
-                    nextState == compTwoFirst;
+                    nextState = compTwoFirst;
                   else if (patternSignal == 3) // G
-                    nextState == Error;
+                    nextState = Error;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
 
                 
       seenA3 : begin
                   if (patternSignal == 0) // A
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 1) // C
-                    nextState == seenAC3;
+                    nextState = seenAC3;
                   else if (patternSignal == 2) // T
-                    nextState == seenAT3;
+                    nextState = seenAT3;
                   else if (patternSignal == 3) // G
-                    nextState == seenAG3;
+                    nextState = seenAG3;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenC3 : begin
                   if (patternSignal == 0) // A
-                    nextState == seenAC3;
+                    nextState = seenAC3;
                   else if (patternSignal == 1) // C
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 2) // T
-                    nextState == seenCT3;
+                    nextState = seenCT3;
                   else if (patternSignal == 3) // G
-                    nextState == seenCG3;
+                    nextState = seenCG3;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenT3 : begin
                   if (patternSignal == 0) // A
-                    nextState == seenAT3;
+                    nextState = seenAT3;
                   else if (patternSignal == 1) // C
-                    nextState == seenCT3;
+                    nextState = seenCT3;
                   else if (patternSignal == 2) // T
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 3) // G
-                    nextState == seenTG3;
+                    nextState = seenTG3;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenG3 : begin
                   if (patternSignal == 0) // A
-                    nextState == seenAG3;
+                    nextState = seenAG3;
                   else if (patternSignal == 1) // C
-                    nextState == seenCG3;
+                    nextState = seenCG3;
                   else if (patternSignal == 2) // T
-                    nextState == seenTG3;
+                    nextState = seenTG3;
                   else if (patternSignal == 3) // G
-                    nextState == Error;
+                    nextState = Error;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenAC3 : begin
                   if (patternSignal == 0) // A
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 1) // C
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 2) // T
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 3) // G
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenAT3 : begin
                   if (patternSignal == 0) // A
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 1) // C
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 2) // T
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 3) // G
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenAG3 : begin
                   if (patternSignal == 0) // A
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 1) // C
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 2) // T
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 3) // G
-                    nextState == Error;
+                    nextState = Error;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenCT3 : begin
                   if (patternSignal == 0) // A
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 1) // C
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 2) // T
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 3) // G
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenCG3 : begin
                   if (patternSignal == 0) // A
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 1) // C
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 2) // T
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 3) // G
-                    nextState == Error;
+                    nextState = Error;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
                 
       seenTG3 : begin
                   if (patternSignal == 0) // A
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 1) // C
-                    nextState == compThreeFirst;
+                    nextState = compThreeFirst;
                   else if (patternSignal == 2) // T
-                    nextState == Error;
+                    nextState = Error;
                   else if (patternSignal == 3) // G
-                    nextState == Error;
+                    nextState = Error;
                   else
-                    nextState == Error;
+                    nextState = Error;
                 end
       
       endNoGood : nextState = (ready) ? readLetPat : endNoGood;
@@ -416,7 +417,7 @@ module fsm
              state == compTwoSec || 
              state == compThreeFirst || 
              state == compThreeSec ||
-             start == compThreeThird)
+             state == compThreeThird)
       begin
         en_wc = 0;
         cl_wc = 0;
@@ -613,7 +614,22 @@ module fsm
         ld_tmp = 0;
         sel_tmp = 1;
       end
-             
+
+    else if (state == loadTmp2 ||
+             state == loadTmp3)
+      begin
+        en_wc = 0;
+        cl_wc = 0;
+        en_pc = 0;
+        cl_pc = 0;
+        en_lc = 0;
+        cl_lc = 0;
+        re_p = 1;
+        re_s = 0;
+        en_tmp = 1;
+        ld_tmp = 1;
+        sel_tmp = 1;
+      end    
  
     end
         

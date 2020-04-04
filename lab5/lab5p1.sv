@@ -16,8 +16,9 @@ module lab5p1
    logic lenLt, lenEq, lenGt;
    logic [15:0] WordCount;
    logic [11:0] PatternCount;
-   logic [3:0] LetterCount, patternSignal;
-   logic [15:0] checkPatAhead, MuxedPatCount;
+   logic [3:0] LetterCount;
+   logic [2:0] patternSignal;
+   logic [11:0] checkPatAhead, MuxedPatCount, regCheckAhead;
    logic sel_tmp, ld_tmp, cl_tmp, en_tmp;
   
    
@@ -43,8 +44,10 @@ module lab5p1
                                .D(LetterCount), .Q(LetterCount));
                                
    Counter #(12) CheckAheadCounter (.en(en_tmp), .clear(cl_tmp), .load(ld_tmp),
-                                    .up(1'b1), .clock, .D(checkPatAhead), 
+                                    .up(1'b1), .clock, .D(regCheckAhead), 
                                     .Q(checkPatAhead));
+
+   //Register #(12) PatCountReg (.en(1'b1), .clear(1'b0), .D(regCheckAhead), .Q(checkPatAhead));
                                
    
    MagComp #(16) WordComp (.A(WordCount), .B(dna_length), 
@@ -53,8 +56,8 @@ module lab5p1
    MagComp #(4) LetterComp (.A(LetterCount), .B(how_much),   
                             .AltB(lenLt), .AeqB(lenEq), .AgtB(lenGt));
                            
-   Mux2to1 #(12) PatCountLoadMux (.S(ld_tmp), .I0(12'b0), .I1(PatternCount),
-                              .Y(checkPatAhead));
+   Mux2to1 #(12) PatCountLoadMux (.S(ld_tmp), .I0(checkPatAhead), .I1(PatternCount),
+                              .Y(regCheckAhead));
                               
    Mux2to1 #(12) PatCountMux (.S(sel_tmp), .I0(PatternCount), .I1(checkPatAhead),
                               .Y(MuxedPatCount));

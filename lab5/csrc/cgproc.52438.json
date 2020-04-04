@@ -1,0 +1,48 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "Multiplexer": {},
+        "std": {},
+        "lab5p1_test": {
+            "Compiled Times": 17,
+            "Compiled": "Yes"
+        },
+        "ShiftRegister": {},
+        "Decoder": {},
+        "Adder": {},
+        "Register": {},
+        "BarrelShiftRegister": {}
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.130/_52438_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9393
+                ],
+                [
+                    "R7SEZ_d.o",
+                    61674
+                ]
+            ],
+            "size": 71067
+        }
+    ],
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "out": "amcQw_d.o",
+            "mod": "...MASTER...",
+            "bytes": 9393,
+            "archive": "archive.130/_52438_archive_1.a"
+        },
+        "R7SEZ_d": {
+            "mode": 4,
+            "out": "R7SEZ_d.o",
+            "mod": "lab5p1_test",
+            "bytes": 61674,
+            "archive": "archive.130/_52438_archive_1.a"
+        }
+    }
+}
