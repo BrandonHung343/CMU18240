@@ -19,7 +19,9 @@ module lab5p2
    logic [15:0] WordCount, MuxedWord;
    logic [11:0] PatternCount, MuxedPat;
    logic [3:0] LetterCount;
- 
+   logic [2:0] patternSignal;
+   logic [11:0] checkPatAhead, MuxedPatCount, regCheckAhead;
+   logic sel_tmp, ld_tmp, cl_tmp, en_tmp;
    
    fsm2 FSM (.*);
    
@@ -41,6 +43,10 @@ module lab5p2
    Counter #(4) LetterCounter (.en(en_lc), .clear(cl_lc), .load(1'b0),
                                .up(1'b1), .clock, 
                                .D(LetterCount), .Q(LetterCount));
+                               
+   Counter #(12) CheckAheadCounter (.en(en_tmp), .clear(cl_tmp), .load(ld_tmp),
+                                    .up(1'b1), .clock, .D(regCheckAhead), 
+                                    .Q(checkPatAhead));
    
    MagComp #(16) WordComp (.A(WordCount), .B(dna_length), 
                            .AltB(seqLt), .AeqB(seqEq), .AgtB(seqGt));
@@ -50,9 +56,17 @@ module lab5p2
 
    Mux2to1 #(16) WordMux (.S(ld_wc), .I0(WordCount), 
                           .I1(dna_start), .Y(MuxedWord));  
+                          
    
-   Mux2to1 #(12) PatMux (.S(ld_pc), .I0(PatternCount), 
+   
+   Mux2to1 #(12) PatMux (.S(ld_pc), .I0(MuxedPatCount), 
                          .I1(pattern_start), .Y(MuxedPat));
+                         
+   Mux2to1 #(12) PatCountLoadMux (.S(ld_tmp), .I0(checkPatAhead), .I1(PatternCount),
+                              .Y(regCheckAhead));
+                              
+   Mux2to1 #(12) PatCountMux (.S(sel_tmp), .I0(PatternCount), .I1(checkPatAhead),
+                              .Y(MuxedPatCount));
                  
    
    assign len_reached = (lenEq) ? 1'b1 : 1'b0;
