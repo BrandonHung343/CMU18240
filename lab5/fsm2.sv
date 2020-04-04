@@ -8,7 +8,7 @@ module fsm2
    output logic en_pc, cl_pc, re_p, re_s, en_wc, cl_wc,
                 cl_lc, en_lc, done, found_it, error,
                 cl_tmp, en_tmp, ld_tmp, sel_tmp, ld_wc,
-                ld_pc)
+                ld_pc);
                 
    enum logic [5:0] {start = 6'b000000, readLetPat = 6'b000001,
                      checkPattern = 6'b000010, compTwoFirst = 6'b000011,
