@@ -28,7 +28,7 @@ module lab5p2
    MemoryNucs Seq_Mem (.re(re_s), .we(1'b0), .clock,
                                       .Addr(WordCount), .Data(nuc));
    MemoryPattern Pattern_Mem (.re(re_p), .we(1'b0), .clock,
-                      .Addr(PatternCount), .Data(pattern));
+                      .Addr(MuxedPat), .Data(pattern));
                       
    PatternChecker PatCheck (.*);
    
