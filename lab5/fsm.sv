@@ -127,6 +127,8 @@ module fsm
                          nextState = incWordOneUp;
                        else if (len_reached == 1)
                          nextState = incPatFinish;
+                       else 
+                         nextState = incPatFinish;
                      end
       incWordOneUp : nextState = oneMatchUpTo;
                                  
