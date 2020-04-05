@@ -1,12 +1,12 @@
 {
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
     "std": [
         "std",
         "reYIK",
-        "module"
-    ],
-    "lab5p2_test": [
-        "lab5p2_test",
-        "gh4Fk",
         "module"
     ],
     "Multiplexer": [
@@ -19,16 +19,6 @@
         "xUt1z",
         "module"
     ],
-    "Decoder": [
-        "Decoder",
-        "t8TcA",
-        "module"
-    ],
-    "Register": [
-        "Register",
-        "kynWL",
-        "module"
-    ],
     "BarrelShiftRegister": [
         "BarrelShiftRegister",
         "ts568",
@@ -37,6 +27,11 @@
     "ShiftRegister": [
         "ShiftRegister",
         "WB1J1",
+        "module"
+    ],
+    "lab5p3_test": [
+        "lab5p3_test",
+        "ksjpp",
         "module"
     ],
     "...MASTER...": [

@@ -22,9 +22,9 @@
 -q
 -sverilog
 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
-fsm2.sv
-lab5p2.sv
-lab5p2_test.sv
+fsm3.sv
+lab5p3.sv
+lab5p3_test.sv
 library.sv
 pattern_checker.sv
 54
@@ -84,14 +84,14 @@ BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 5
+1586051793 fsm3.sv
+1586054548 lab5p3_test.sv
+1586052337 lab5p3.sv
 1586039164 pattern_checker.sv
-1586045708 library.sv
-1586046734 fsm2.sv
-1586045389 lab5p2.sv
-1586047000 lab5p2_test.sv
+1586052153 library.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1586047003 simv.daidir
+1586054551 simv.daidir

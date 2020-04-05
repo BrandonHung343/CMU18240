@@ -6,16 +6,9 @@ module fsm3
    input logic ready,
    input logic clock, reset_N,
    output logic en_pc, cl_pc, re_p, re_s, en_wc, cl_wc,
-                cl_lc, en_lc, done, found_it, error,
-                cl_tmp, en_tmp, ld_tmp, sel_tmp, ld_wc,
-                ld_pc, ld_fc, en_fc, start_sel);
-  (input logic [2:0] fsm_notif, 
-   input logic end_seq, len_reached,
-   input logic ready,
-   input logic clock, reset_N,
-   output logic en_pc, cl_pc, re_p, re_s, en_wc, cl_wc,
                 cl_lc, en_lc, done, found_it, error, ld_wc,
-                ld_pc, ld_fc, en_fc, start_sel);
+                ld_pc, ld_fc, en_fc, start_sel, cl_tmp, en_tmp,
+                ld_tmp, sel_tmp);
                 
    enum logic [5:0] {start = 6'b000000, readLetPat = 6'b000001,
                      checkPattern = 6'b000010, compTwoFirst = 6'b000011,
@@ -48,7 +41,7 @@ module fsm3
      if (state != start && fsm_notif == 2)
        nextState = Error;
      else if (end_seq && fsm_notif != 7)
-       nextState = endNoGood;
+       nextState = Error;
        unique case (state)
         start : nextState = (ready) ? readLetPat : start;
         readLetPat : nextState = checkPattern;
@@ -144,7 +137,7 @@ module fsm3
         doneOneLeft : nextState = incLetPat;
         doneTwoLeft : nextState = doneOneLeft;
         
-        incLetPat : nextState = readLetPat;
+        incLetPat : nextState = (end_seq) ? Error : readLetPat;
         
         incPat21 : nextState = loadTmp2;
         incPat22 : nextState = compTwoSec;
@@ -368,9 +361,9 @@ module fsm3
                       nextState = Error;
                   end
         
-        endNoGood : nextState = incFound;
+        endNoGood : nextState = (end_seq) ? Error : incFound;
         Error : nextState = Error;
-        good : nextState = incFound;
+        good : nextState = (end_seq) ? Error : incFound;
         default : nextState = start;
       endcase
     end

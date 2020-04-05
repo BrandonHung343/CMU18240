@@ -91,7 +91,7 @@ module lab5p3
             found_location = 16'bx;
      end
    assign len_reached = (lenEq) ? 1'b1 : 1'b0;
-   assign end_seq = (seqEq) ? 1'b1 : 1'b0;
+   assign end_seq = (next_start - 1 == dna_length) ? 1'b1 : 1'b0;
 
 endmodule: lab5p3
     

@@ -8,6 +8,8 @@ module lab5p3_test ();
   logic done, found_it, error;
   logic [15:0] found_location;
 
+  lab5p3 psm (.*);
+
   initial begin
     $monitor($time,, "ready=%b, reset_N = %b, done=%b, error=%b\
                       state=%s, found_it=%b, dna_length=%d\n\
@@ -25,7 +27,7 @@ module lab5p3_test ();
                       psm.en_wc, psm.en_pc, psm.ld_pc, psm.ld_wc,
                       psm.ld_fc, psm.next_start, dna_start, 
                       psm.start_sel, found_location, psm.MuxedStart,
-                      psm.en_fc, psm.checkAhead, psm.ld_tmp, psm.en_tmp,
+                      psm.en_fc, psm.checkPatAhead, psm.ld_tmp, psm.en_tmp,
                       psm.MuxedPatCount, psm.patternSignal);
     clock = 0;
     forever #5 clock = ~clock;
@@ -33,9 +35,9 @@ module lab5p3_test ();
   
   initial begin
     reset_N = 0;
-    dna_start = 0;
+    dna_start = 1;
     pattern_start = 0;
-    dna_length = 4;
+    dna_length = 19;
     ready = 0;
     @(posedge clock);
     reset_N = 1;

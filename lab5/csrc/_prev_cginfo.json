@@ -1,85 +1,90 @@
 {
+    "stat": {
+        "nMops": 6194
+    },
     "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 80771
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "lab5p3_test"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
     "PrevCompiledModules": {
         "Multiplexer": {
             "UxyT3_d": {
                 "bytes": 7812,
+                "mode": 4,
                 "mod": "Multiplexer",
-                "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
+                "archive": "archive.160/_prev_archive_1.a",
                 "out": "UxyT3_d.o"
-            }
-        },
-        "Register": {
-            "kynWL_d": {
-                "bytes": 7597,
-                "mod": "Register",
-                "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
-                "out": "kynWL_d.o"
             }
         },
         "BarrelShiftRegister": {
             "ts568_d": {
                 "bytes": 7571,
+                "mode": 4,
                 "mod": "BarrelShiftRegister",
-                "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
+                "archive": "archive.160/_prev_archive_1.a",
                 "out": "ts568_d.o"
-            }
-        },
-        "Decoder": {
-            "t8TcA_d": {
-                "bytes": 7919,
-                "mod": "Decoder",
-                "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
-                "out": "t8TcA_d.o"
-            }
-        },
-        "lab5p2_test": {
-            "gh4Fk_d": {
-                "bytes": 63430,
-                "mod": "lab5p2_test",
-                "out": "gh4Fk_d.o",
-                "mode": 4,
-                "archive": "archive.153/_79857_archive_1.a"
-            }
-        },
-        "ShiftRegister": {
-            "WB1J1_d": {
-                "bytes": 7515,
-                "mod": "ShiftRegister",
-                "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
-                "out": "WB1J1_d.o"
             }
         },
         "Adder": {
             "xUt1z_d": {
                 "bytes": 7492,
-                "mod": "Adder",
                 "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
+                "mod": "Adder",
+                "archive": "archive.160/_prev_archive_1.a",
                 "out": "xUt1z_d.o"
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "bytes": 7919,
+                "mode": 4,
+                "mod": "Decoder",
+                "archive": "archive.160/_prev_archive_1.a",
+                "out": "t8TcA_d.o"
+            }
+        },
+        "ShiftRegister": {
+            "WB1J1_d": {
+                "bytes": 7515,
+                "mode": 4,
+                "mod": "ShiftRegister",
+                "archive": "archive.160/_prev_archive_1.a",
+                "out": "WB1J1_d.o"
+            }
+        },
+        "lab5p3_test": {
+            "ksjpp_d": {
+                "bytes": 66700,
+                "mode": 4,
+                "mod": "lab5p3_test",
+                "out": "ksjpp_d.o",
+                "archive": "archive.160/_105877_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
                 "bytes": 29004,
-                "mod": "std",
                 "mode": 4,
-                "archive": "archive.153/_prev_archive_1.a",
+                "mod": "std",
+                "archive": "archive.160/_prev_archive_1.a",
                 "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "bytes": 9393,
+                "bytes": 9100,
+                "mode": 4,
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
-                "mode": 4,
-                "archive": "archive.153/_79857_archive_1.a"
+                "archive": "archive.160/_105877_archive_1.a"
             }
         }
     },
@@ -89,9 +94,9 @@
             "reYIK",
             "module"
         ],
-        "lab5p2_test": [
-            "lab5p2_test",
-            "gh4Fk",
+        "lab5p3_test": [
+            "lab5p3_test",
+            "ksjpp",
             "module"
         ],
         "Multiplexer": [
@@ -99,29 +104,24 @@
             "UxyT3",
             "module"
         ],
-        "Decoder": [
-            "Decoder",
-            "t8TcA",
-            "module"
-        ],
         "Adder": [
             "Adder",
             "xUt1z",
             "module"
         ],
-        "BarrelShiftRegister": [
-            "BarrelShiftRegister",
-            "ts568",
-            "module"
-        ],
-        "Register": [
-            "Register",
-            "kynWL",
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
             "module"
         ],
         "ShiftRegister": [
             "ShiftRegister",
             "WB1J1",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
             "module"
         ],
         "...MASTER...": [
@@ -130,34 +130,20 @@
             "module"
         ]
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 79441
-    },
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "nMops": 5771
-    },
-    "CompileProcesses": [
-        "cgproc.79857.json"
-    ],
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER...",
-        "lab5p2_test"
-    ],
-    "LVLData": [
-        "SIM"
-    ],
     "PEModules": [],
+    "CurCompileUdps": {},
+    "CompileStrategy": "fullobj",
+    "CompileProcesses": [
+        "cgproc.105877.json"
+    ],
     "CompileStatus": "Successful",
     "Misc": {
-        "default_output_dir": "csrc",
+        "daidir": "simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab5",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/csrc",
         "csrc": "csrc",
-        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab5",
-        "daidir": "simv.daidir",
         "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab5/simv.daidir",
-        "archive_dir": "archive.153"
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.160"
     }
 }
