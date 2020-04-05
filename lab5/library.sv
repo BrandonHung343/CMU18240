@@ -164,7 +164,7 @@ module MemoryNucs
       M[Addr] <= Data;
       
   initial
-    $readmemb("task1checkoffnuc.mem", M);
+    $readmemb("task2nuc.mem", M);
       
   always_comb
     out = M[Addr];
@@ -189,7 +189,7 @@ module MemoryPattern
       M[Addr] <= Data;
       
   initial
-    $readmemh("task1test2.mem", M);
+    $readmemh("task2patts.mem", M);
       
   always_comb
     out = M[Addr];

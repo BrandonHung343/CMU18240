@@ -1,22 +1,27 @@
 {
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
     "std": [
         "std",
         "reYIK",
         "module"
     ],
-    "Multiplexer": [
-        "Multiplexer",
-        "UxyT3",
-        "module"
-    ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
+    "BarrelShiftRegister": [
+        "BarrelShiftRegister",
+        "ts568",
         "module"
     ],
     "lab5p2_test": [
         "lab5p2_test",
         "gh4Fk",
+        "module"
+    ],
+    "Multiplexer": [
+        "Multiplexer",
+        "UxyT3",
         "module"
     ],
     "Decoder": [
@@ -29,19 +34,14 @@
         "WB1J1",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "Adder": [
+        "Adder",
+        "xUt1z",
         "module"
     ],
     "Register": [
         "Register",
         "kynWL",
-        "module"
-    ],
-    "BarrelShiftRegister": [
-        "BarrelShiftRegister",
-        "ts568",
         "module"
     ]
 }

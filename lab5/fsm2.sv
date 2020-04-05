@@ -492,6 +492,23 @@ module fsm2
         found_it = 0;
         error = 1;
       end
+
+   else if (state == check21 || 
+            state == check31)
+      begin
+        en_wc = 0;
+        cl_wc = 0;
+        en_pc = 0;
+        cl_pc = 0;
+        en_lc = 0;
+        cl_lc = 0;
+        re_p = 1;
+        re_s = 0;
+        ld_tmp = 0;
+        en_tmp = 1;
+        sel_tmp = 1;
+      end
+ 
       
     else if (state == incPat21 ||
              state == incPat31)
