@@ -127,7 +127,7 @@ module fsm2
       oneMatchUpTo : begin 
                        if (fsm_notif == 0 && len_reached == 0)
                          nextState = incWordOneUp;
-                       else if (len_reached == 1)
+                       else
                          nextState = incPatFinish;
                      end
       incWordOneUp : nextState = oneMatchUpTo;

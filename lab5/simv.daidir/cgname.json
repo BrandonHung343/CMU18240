@@ -1,17 +1,7 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
-        "module"
-    ],
-    "BarrelShiftRegister": [
-        "BarrelShiftRegister",
-        "ts568",
         "module"
     ],
     "lab5p2_test": [
@@ -24,9 +14,24 @@
         "UxyT3",
         "module"
     ],
+    "Adder": [
+        "Adder",
+        "xUt1z",
+        "module"
+    ],
     "Decoder": [
         "Decoder",
         "t8TcA",
+        "module"
+    ],
+    "Register": [
+        "Register",
+        "kynWL",
+        "module"
+    ],
+    "BarrelShiftRegister": [
+        "BarrelShiftRegister",
+        "ts568",
         "module"
     ],
     "ShiftRegister": [
@@ -34,14 +39,9 @@
         "WB1J1",
         "module"
     ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
-        "module"
-    ],
-    "Register": [
-        "Register",
-        "kynWL",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }
