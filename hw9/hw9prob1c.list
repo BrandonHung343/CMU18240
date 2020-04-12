@@ -1,0 +1,9 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+0000 3100             LI      R4      
+0002 0011                     $11     
+0004 20A0             MV      R2 R4   
+0006 2100             MV      R4 R0   
+0008 2190             MV      R6 R2   
+000A 2080             MV      R2 R0   
+000C FE00             STOP            

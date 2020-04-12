@@ -1,0 +1,10 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+0100 3040             LI      R1      
+0102 000F                     $F      
+0104 3080             LI      R2      
+0106 000E                     $E      
+0108 E290             SRLI    R2 R2   
+010A 0001                     $1      
+010C 10CA             SUB     R3 R1 R2
+010E FE00             STOP            
