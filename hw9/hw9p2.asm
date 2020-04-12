@@ -1,4 +1,4 @@
- .ORG $1234
+  .ORG $1234
 L .DW $6
 A .DW $1
   .DW $5
@@ -6,6 +6,7 @@ A .DW $1
   .DW $7
   .DW $2
   .DW $8
+
   .ORG $1000
   LI r3 , A
   LI r7 , L
@@ -20,6 +21,6 @@ B XOR r6 , r1 , r2
   AND r6 , r4 , r6
   BRZ O
   ADDI r5 , r5 , $1
-  O ADDI r1 , r1 , $1
+O ADDI r1 , r1 , $1
   BRA B
 E STOP
