@@ -11,12 +11,12 @@ BOARD   .DW  $1324 ; placements of queens in row 0-3
         LI R2, $0 ; initialize R2 as column counter
 
 ztothr  LI R7, $0 ; initialize to use board 
-        LW R1, R6, $0 ;
+        MV R1, R6 ; initializes R1 to R6
         BRA loop
         
 frtosev LI R7, $1 ; initial to use board + 1
-        LI R2, $F ; subtract 16 get ready
-        SUB R1, R6, R2 ; subtract 16 from R6
+        LI R1, $F ; subtract 16 get ready
+        SUB R1, R6, R1 ; subtract 16 from R6
         
 loop    LW R4, R7, BOARD ; loads in the word
         LI R7, $F000 ; initialize the thing to get our bits out
@@ -52,8 +52,8 @@ chkcol  OR R5, R5, R1 ; was ok so set that bit to a 1 in R5
         
 next    SLTI R1, R6, $1C ; check if we are at 28 yet
         BRZ good
-        SLTI R1, R6, $10 ; check if less than or equal to 16
         ADDI R6, R6, $4 ; add 4 to R6 
+        SLTI R1, R6, $14 ; check if less than or equal to 20 
         BRN ztothr ; branch if we are 0 - 12
         BRA frtosev ; branch to 4-7 row        
                 

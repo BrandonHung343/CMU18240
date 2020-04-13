@@ -1,0 +1,87 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+1234 1324  BOARD      .DW     $1324   
+1236 0657             .DW     $0657   
+1000 31C0             LI      R7      
+1002 0000                     $0      
+1004 3180             LI      R6      
+1006 0000                     $0      
+1008 3040             LI      R1      
+100A 0000                     $0      
+100C 30C0             LI      R3      
+100E 0000                     $0      
+1010 3140             LI      R5      
+1012 0000                     $0      
+1014 3080             LI      R2      
+1016 0000                     $0      
+1018 31C0  ZTOTHR     LI      R7      
+101A 0000                     $0      
+101C 2070             MV      R1 R6   
+101E F800             BRA             
+1020 102C                     LOOP    
+1022 31C0  FRTOSEV    LI      R7      
+1024 0001                     $1      
+1026 3040             LI      R1      
+1028 000F                     $F      
+102A 1071             SUB     R1 R6 R1
+102C 2938  LOOP       LW      R4 R7   
+102E 1234                     BOARD   
+1030 31C0             LI      R7      
+1032 F000                     $F000   
+1034 C121             SLL     R4 R4 R1
+1036 9127             AND     R4 R4 R7
+1038 E320             SRLI    R4 R4   
+103A 000C                     $C      
+103C E3B0             SRLI    R6 R6   
+103E 0002                     $2      
+1040 01E6             ADD     R7 R4 R6
+1042 3040             LI      R1      
+1044 0001                     $1      
+1046 C04F             SLL     R1 R1 R7
+1048 9019             AND     R0 R3 R1
+104A C800             BRZ             
+104C 1052                     CHKLRD  
+104E F800             BRA             
+1050 10A0                     SEEN    
+1052 A0D9  CHKLRD     OR      R3 R3 R1
+1054 31E0             ADDI    R7 R4   
+1056 0007                     $7      
+1058 11FE             SUB     R7 R7 R6
+105A 3040             LI      R1      
+105C 0001                     $1      
+105E C04F             SLL     R1 R1 R7
+1060 9029             AND     R0 R5 R1
+1062 C800             BRZ             
+1064 106A                     CHKCOL  
+1066 F800             BRA             
+1068 10A0                     SEEN    
+106A A169  CHKCOL     OR      R5 R5 R1
+106C 3040             LI      R1      
+106E 0001                     $1      
+1070 C04E             SLL     R1 R1 R6
+1072 9011             AND     R0 R2 R1
+1074 C3B0             SLLI    R6 R6   
+1076 0002                     $2      
+1078 C800             BRZ             
+107A 1080                     NEXT    
+107C F800             BRA             
+107E 10A0                     SEEN    
+1080 5270  NEXT       SLTI    R1 R6   
+1082 001C                     $1C     
+1084 C800             BRZ             
+1086 1098                     GOOD    
+1088 31B0             ADDI    R6 R6   
+108A 0004                     $4      
+108C 5270             SLTI    R1 R6   
+108E 0014                     $14     
+1090 9800             BRN             
+1092 1018                     ZTOTHR  
+1094 F800             BRA             
+1096 1022                     FRTOSEV 
+1098 31C0  GOOD       LI      R7      
+109A 0001                     $1      
+109C F800             BRA             
+109E 10A4                     DONE    
+10A0 31C0  SEEN       LI      R7      
+10A2 0000                     $0      
+10A4 FE00  DONE       STOP            
