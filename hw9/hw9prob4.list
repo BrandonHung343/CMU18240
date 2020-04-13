@@ -1,7 +1,7 @@
 addr data   label     opcode  operands
 ---- ----  --------   ------  --------
-1234 1324  BOARD      .DW     $1324   
-1236 0657             .DW     $0657   
+1234 4273  BOARD      .DW     $4273   
+1236 6051             .DW     $6051   
 1000 31C0             LI      R7      
 1002 0000                     $0      
 1004 3180             LI      R6      
@@ -20,9 +20,9 @@ addr data   label     opcode  operands
 101E F800             BRA             
 1020 102C                     LOOP    
 1022 31C0  FRTOSEV    LI      R7      
-1024 0001                     $1      
+1024 0002                     $2      
 1026 3040             LI      R1      
-1028 000F                     $F      
+1028 0010                     $10     
 102A 1071             SUB     R1 R6 R1
 102C 2938  LOOP       LW      R4 R7   
 102E 1234                     BOARD   
@@ -42,7 +42,7 @@ addr data   label     opcode  operands
 104A C800             BRZ             
 104C 1052                     CHKLRD  
 104E F800             BRA             
-1050 10A0                     SEEN    
+1050 10A2                     SEEN    
 1052 A0D9  CHKLRD     OR      R3 R3 R1
 1054 31E0             ADDI    R7 R4   
 1056 0007                     $7      
@@ -54,34 +54,35 @@ addr data   label     opcode  operands
 1062 C800             BRZ             
 1064 106A                     CHKCOL  
 1066 F800             BRA             
-1068 10A0                     SEEN    
+1068 10A2                     SEEN    
 106A A169  CHKCOL     OR      R5 R5 R1
 106C 3040             LI      R1      
 106E 0001                     $1      
-1070 C04E             SLL     R1 R1 R6
-1072 9011             AND     R0 R2 R1
-1074 C3B0             SLLI    R6 R6   
-1076 0002                     $2      
+1070 C04C             SLL     R1 R1 R4
+1072 C3B0             SLLI    R6 R6   
+1074 0002                     $2      
+1076 9011             AND     R0 R2 R1
 1078 C800             BRZ             
 107A 1080                     NEXT    
 107C F800             BRA             
-107E 10A0                     SEEN    
-1080 5270  NEXT       SLTI    R1 R6   
-1082 001C                     $1C     
-1084 C800             BRZ             
-1086 1098                     GOOD    
-1088 31B0             ADDI    R6 R6   
-108A 0004                     $4      
-108C 5270             SLTI    R1 R6   
-108E 0014                     $14     
-1090 9800             BRN             
-1092 1018                     ZTOTHR  
-1094 F800             BRA             
-1096 1022                     FRTOSEV 
-1098 31C0  GOOD       LI      R7      
-109A 0001                     $1      
-109C F800             BRA             
-109E 10A4                     DONE    
-10A0 31C0  SEEN       LI      R7      
-10A2 0000                     $0      
-10A4 FE00  DONE       STOP            
+107E 10A2                     SEEN    
+1080 A091  NEXT       OR      R2 R2 R1
+1082 5270             SLTI    R1 R6   
+1084 001C                     $1C     
+1086 C800             BRZ             
+1088 109A                     GOOD    
+108A 31B0             ADDI    R6 R6   
+108C 0004                     $4      
+108E 5270             SLTI    R1 R6   
+1090 0010                     $10     
+1092 9800             BRN             
+1094 1018                     ZTOTHR  
+1096 F800             BRA             
+1098 1022                     FRTOSEV 
+109A 31C0  GOOD       LI      R7      
+109C 0001                     $1      
+109E F800             BRA             
+10A0 10A6                     DONE    
+10A2 31C0  SEEN       LI      R7      
+10A4 0000                     $0      
+10A6 FE00  DONE       STOP            

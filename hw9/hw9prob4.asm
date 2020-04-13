@@ -1,6 +1,7 @@
-        .ORG $1234
-BOARD   .DW  $1324 ; placements of queens in row 0-3
-        .DW  $0657 ; placement of queens in row 4-7
+        
+        .ORG $2000
+BOARD   .DW  $4273;.DW  $1324 ; placements of queens in row 0-3;.
+        .DW  $6051;DW  $0657 ; placement of queens in row 4-7
         
         .ORG $1000
         LI R7, $0 ; initialize board 1 or board2 counter
@@ -14,8 +15,8 @@ ztothr  LI R7, $0 ; initialize to use board
         MV R1, R6 ; initializes R1 to R6
         BRA loop
         
-frtosev LI R7, $1 ; initial to use board + 1
-        LI R1, $F ; subtract 16 get ready
+frtosev LI R7, $2 ; initial to use board + 1
+        LI R1, $10 ; subtract 16 get ready
         SUB R1, R6, R1 ; subtract 16 from R6
         
 loop    LW R4, R7, BOARD ; loads in the word
@@ -44,16 +45,17 @@ chklrd  OR R3, R3, R1 ; was ok so set that bit to a 1 in R3
         
 chkcol  OR R5, R5, R1 ; was ok so set that bit to a 1 in R5
         LI R1, $1 ; get ready to find column with R2
-        SLL R1, R1, R6 ; shift by number of columns
+        SLL R1, R1, R4 ; shift by number of columns
+        SLLI R6, R6, $2 ; restore R6 back to a counter 
         AND R0, R2, R1 ; if 0, it's a new column
-        SLLI R6, R6, $2 ; restore R6 back to a counter
         BRZ next
         BRA seen
         
-next    SLTI R1, R6, $1C ; check if we are at 28 yet
+next    OR R2, R2, R1 ; set columns right
+        SLTI R1, R6, $1C ; check if we are at 28 yet
         BRZ good
         ADDI R6, R6, $4 ; add 4 to R6 
-        SLTI R1, R6, $14 ; check if less than or equal to 20 
+        SLTI R1, R6, $10 ; check if less than or equal to 20 
         BRN ztothr ; branch if we are 0 - 12
         BRA frtosev ; branch to 4-7 row        
                 
