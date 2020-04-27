@@ -14,11 +14,9 @@ module mult_dp
    logic [7:0] intMax; // for reference
    logic [15:0] shiftedA, absA16; // left 8 bits of both should be 0
    logic [15:0] ans, notAns, sum;
-<<<<<<< HEAD
+
    logic dead1, dead2, dead3, dead4, dead5, dead6, dead7;
-=======
->>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
-   
+
    always_comb begin
     notA = ~A + 1;
     notB = ~B + 1;
@@ -26,7 +24,6 @@ module mult_dp
     intMax = 8'b01111111;
     absA16 = {8'b00, absA8};
     lsb1 = shiftedB[0]; 
-<<<<<<< HEAD
     // clock = clk;
    end
    
@@ -51,8 +48,6 @@ module mult_dp
                               
    Adder #(16) iterAdd (.A(shiftedA), .B(ans), .Cin(1'b0), 
                         .S(sum), .Cout(dead7));
-=======
-   end
    
    Mux2to1 #(8) negateA (.I0(A), .I1(notA), .S(flipA), .Y(absA));
    Mux2to1 #(8) negateB (.I0(B), .I1(notB), .S(flipB), .Y(absB));
@@ -71,8 +66,6 @@ module mult_dp
                               .clk, .left(1'b1), .Q(shiftedB));
                               
    Adder #(16) iterAdd (.A(shiftedA), .B(ans), .Cin(1'b0), .S(sum), );
->>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
-                              
    fsm dut (.*);
    
 endmodule: mult_dp

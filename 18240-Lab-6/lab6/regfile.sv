@@ -1,1 +1,1 @@
-/afs/ece.cmu.edu/class/ee240/bin/RISC240/regfile.sv
+C:/afs/ece.cmu.edu/class/ee240/bin/RISC240/regfile.sv

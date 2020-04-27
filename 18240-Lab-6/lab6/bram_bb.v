@@ -1,1 +1,1 @@
-/afs/ece.cmu.edu/class/ee240/bin/RISC240/bram_bb.v
+C:/afs/ece.cmu.edu/class/ee240/bin/RISC240/bram_bb.v
