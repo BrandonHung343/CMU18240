@@ -1,0 +1,43 @@
+{
+    "Modules": {
+        "CalcCoin": {},
+        "...MASTER...": {},
+        "std": {},
+        "test_change": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "wse6d_d": {
+            "mod": "test_change",
+            "out": "wse6d_d.o",
+            "bytes": 19937,
+            "mode": 4,
+            "archive": "archive.34/_24742_archive_1.a"
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4,
+            "archive": "archive.34/_24742_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.34/_24742_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "wse6d_d.o",
+                    19937
+                ]
+            ],
+            "size": 27273
+        }
+    ]
+}

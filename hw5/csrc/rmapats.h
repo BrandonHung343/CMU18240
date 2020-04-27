@@ -1911,13 +1911,13 @@ static inline U asm_bsf (U in)
 extern "C" {
 #endif
 void  hsM_0_0 (UB  * pcode, scalar  val);
-void  hsM_0_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
-void  hsM_0_2 (UB  * pcode);
-void  hsM_0_11 (UB  * pcode, scalar  val);
 void  hsM_1_0 (UB  * pcode, scalar  val);
-void  hsM_1_1 (UB  * pcode, scalar  val, U  I1022, scalar  * I1021);
-void  hsM_1_2 (UB  * pcode);
-void  hsM_1_11 (UB  * pcode, scalar  val);
+void  hsM_2_0 (UB  * pcode, scalar  val);
+void  hsM_3_0 (UB  * pcode, scalar  val);
+void  hsM_4_0 (UB  * pcode, scalar  val);
+void  hsM_5_0 (UB  * pcode, scalar  val);
+void  hsM_6_0 (UB  * pcode, scalar  val);
+void  hsM_7_0 (UB  * pcode, scalar  val);
 void  hsG_0 (struct dummyq_struct * I1008, EBLK  * I1009, U  I714);
 #ifdef __cplusplus
 }

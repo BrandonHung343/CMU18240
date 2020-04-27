@@ -104,13 +104,14 @@ module Register
    input logic clock, reset_L,
    output logic [WIDTH-1:0] Q);
    
-  logic Qout;
+  logic [WIDTH-1:0] Qout;
   always_ff @(posedge clock, 
               negedge reset_L)
     if (~reset_L)
       Qout <= 0;
     else if (en)
       Qout <= clear ? 0 : D;
+
   assign #1 Q = Qout; 
       
 endmodule: Register

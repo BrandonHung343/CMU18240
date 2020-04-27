@@ -1,99 +1,43 @@
 {
+    "CompileProcesses": [
+        "cgproc.113501.json"
+    ],
     "MlibObjs": {},
     "PrevCompiledModules": {
-        "Multiplexer": {
-            "UxyT3_d": {
-                "archive": "archive.41/_prev_archive_1.a",
-                "bytes": 7812,
-                "mod": "Multiplexer",
-                "out": "UxyT3_d.o",
-                "mode": 4
-            }
-        },
-        "Decoder": {
-            "t8TcA_d": {
-                "archive": "archive.41/_prev_archive_1.a",
-                "bytes": 7919,
-                "mod": "Decoder",
-                "out": "t8TcA_d.o",
-                "mode": 4
-            }
-        },
-        "MagComp": {
-            "vaLRj_d": {
-                "archive": "archive.41/_prev_archive_1.a",
-                "bytes": 8287,
-                "mod": "MagComp",
-                "out": "vaLRj_d.o",
-                "mode": 4
-            }
-        },
-        "Mux2to1": {
-            "wxUbx_d": {
-                "archive": "archive.41/_prev_archive_1.a",
-                "bytes": 6691,
-                "mod": "Mux2to1",
-                "out": "wxUbx_d.o",
-                "mode": 4
-            }
-        },
-        "serialTwosComp_test": {
-            "gEuBs_d": {
-                "archive": "archive.41/_261434_archive_1.a",
-                "bytes": 27022,
-                "mod": "serialTwosComp_test",
-                "mode": 4,
-                "out": "gEuBs_d.o"
-            }
-        },
         "std": {
             "reYIK_d": {
-                "archive": "archive.41/_prev_archive_1.a",
-                "bytes": 29004,
+                "mode": 4,
+                "bytes": 34314,
+                "archive": "archive.56/_prev_archive_1.a",
                 "mod": "std",
-                "out": "reYIK_d.o",
-                "mode": 4
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "archive": "archive.41/_261434_archive_1.a",
-                "bytes": 8731,
-                "mod": "...MASTER...",
                 "mode": 4,
+                "bytes": 7336,
+                "archive": "archive.56/_113501_archive_1.a",
+                "mod": "...MASTER...",
                 "out": "amcQw_d.o"
             }
         }
     },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 96158
+    },
+    "CompileStrategy": "fullobj",
+    "CompileStatus": "Successful",
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "serialTwosComp_test": [
-            "serialTwosComp_test",
-            "gEuBs",
-            "module"
-        ],
-        "Decoder": [
-            "Decoder",
-            "t8TcA",
-            "module"
-        ],
-        "MagComp": [
-            "MagComp",
-            "vaLRj",
-            "module"
-        ],
-        "Multiplexer": [
-            "Multiplexer",
-            "UxyT3",
-            "module"
-        ],
-        "Mux2to1": [
-            "Mux2to1",
-            "wxUbx",
+        "Multiplexer_test": [
+            "Multiplexer_test",
+            "waMi7",
             "module"
         ],
         "...MASTER...": [
@@ -102,34 +46,25 @@
             "module"
         ]
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 63199
-    },
-    "CompileStrategy": "fullobj",
     "PEModules": [],
     "CurCompileUdps": {},
     "LVLData": [
         "SIM"
     ],
-    "stat": {
-        "nMops": 1191
-    },
     "CurCompileModules": [
         "...MASTER...",
-        "serialTwosComp_test"
+        "Multiplexer_test"
     ],
     "Misc": {
         "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/hw7",
         "csrc": "csrc",
-        "default_output_dir": "csrc",
-        "daidir": "simv.daidir",
         "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/csrc",
+        "archive_dir": "archive.56",
         "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/hw7/simv.daidir",
-        "archive_dir": "archive.41"
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
     },
-    "CompileProcesses": [
-        "cgproc.261434.json"
-    ],
-    "CompileStatus": "Successful"
+    "stat": {
+        "nMops": 300
+    }
 }

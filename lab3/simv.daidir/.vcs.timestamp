@@ -31,17 +31,17 @@ https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
 XMODIFIERS=@im=ibus
-XDG_VTNR=1
+XDG_VTNR=2
 XDG_SESSION_TYPE=x11
-XDG_SESSION_ID=742
+XDG_SESSION_ID=455
 XDG_SESSION_DESKTOP=gnome-classic
 XDG_SEAT=seat0
 XDG_RUNTIME_DIR=/run/user/2645838
 XDG_MENU_PREFIX=gnome-
 XDG_DATA_DIRS=/afs/ece.cmu.edu/usr/bhung/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
 XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
-XAUTHORITY=/run/gdm/auth-for-bhung-qEr70b/database
-WINDOWPATH=1:2:3:1:1:1
+XAUTHORITY=/run/gdm/auth-for-bhung-oODwdb/database
+WINDOWPATH=1:1:2:3:2:2
 VTE_VERSION=5202
 VMR_MODE_FLAG=32
 VCS_TARGET_ARCH=amd64
@@ -60,8 +60,8 @@ SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
 SYNOPSYS=/usr/local/synopsys
 SSH_AUTH_SOCK=/run/user/2645838/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SSH_AGENT_PID=6014
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/5989,unix/unix:/tmp/.ICE-unix/5989
+SSH_AGENT_PID=12381
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/12359,unix/unix:/tmp/.ICE-unix/12359
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QUARTUS_64BIT=1
@@ -84,7 +84,7 @@ HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
 HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
 HISTCONTROL=ignoredups
 GNOME_TERMINAL_SERVICE=:1.84
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/bcc47fb8_d225_4357_baca_f152db1d85d8
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8801c46d_cba0_4e89_8750_959827dff904
 GNOME_SHELL_SESSION_MODE=classic
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 GJS_DEBUG_TOPICS=JS ERROR;JS LOG
@@ -94,18 +94,18 @@ GDMSESSION=gnome-classic
 FTP_PROXY=http://proximus.ece.cmu.edu:3128/
 DESKTOP_SESSION=gnome-classic
 DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-eVXM7QDeq8,guid=ad0f155e143e99d0a5767d705e45c8a3
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-jELYYF1O7t,guid=474be274f1157b6759f117775e56ed17
 CVS_RSH=ssh
 COLORTERM=truecolor
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 2
-1581643246 lab3_test.sv
-1581642789 make_change.sv
+1582761333 make_change.sv
+1582761536 lab3_test.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1581643249 simv.daidir
+1582761541 simv.daidir

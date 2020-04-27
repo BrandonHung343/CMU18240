@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "Mux2to1_test": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4,
+            "archive": "archive.57/_115506_archive_1.a"
+        },
+        "PMNR0_d": {
+            "mod": "Mux2to1_test",
+            "out": "PMNR0_d.o",
+            "bytes": 13213,
+            "mode": 4,
+            "archive": "archive.57/_115506_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.57/_115506_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "PMNR0_d.o",
+                    13213
+                ]
+            ],
+            "size": 20549
+        }
+    ]
+}

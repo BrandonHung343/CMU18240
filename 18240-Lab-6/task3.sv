@@ -14,7 +14,10 @@ module mult_dp
    logic [7:0] intMax; // for reference
    logic [15:0] shiftedA, absA16; // left 8 bits of both should be 0
    logic [15:0] ans, notAns, sum;
+<<<<<<< HEAD
    logic dead1, dead2, dead3, dead4, dead5, dead6, dead7;
+=======
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
    
    always_comb begin
     notA = ~A + 1;
@@ -23,6 +26,7 @@ module mult_dp
     intMax = 8'b01111111;
     absA16 = {8'b00, absA8};
     lsb1 = shiftedB[0]; 
+<<<<<<< HEAD
     // clock = clk;
    end
    
@@ -47,6 +51,27 @@ module mult_dp
                               
    Adder #(16) iterAdd (.A(shiftedA), .B(ans), .Cin(1'b0), 
                         .S(sum), .Cout(dead7));
+=======
+   end
+   
+   Mux2to1 #(8) negateA (.I0(A), .I1(notA), .S(flipA), .Y(absA));
+   Mux2to1 #(8) negateB (.I0(B), .I1(notB), .S(flipB), .Y(absB));
+   Mux2to1 #(16) negateAns (.I0(ans), .I1(notAns), 
+                            .S(flipEnd), .Y(out));
+   
+   Register #(16) outReg (.D(sum), .en(addA), .clear(clrOut), .Q(ans));
+   
+   MagComp #(8) signA (.A(A), .B(intMax), .AgtB(flipA), );
+   MagComp #(8) signB (.A(B), .B(intMax), .AgtB(flipB), );
+   MagComp #(8) doneB (.A(shiftedB), .B(8'b0), .AeqB(doneAdd), );
+   
+   ShiftRegister #(16) shiftA (.D(absA16), .en(enShift), .load(ld), 
+                              .clk, .left(1'b0), .Q(shiftedA));
+   ShiftRegister #(8) shiftB (.D(absB8), .en(enShift), .load(ld),
+                              .clk, .left(1'b1), .Q(shiftedB));
+                              
+   Adder #(16) iterAdd (.A(shiftedA), .B(ans), .Cin(1'b0), .S(sum), );
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
                               
    fsm dut (.*);
    
@@ -70,4 +95,8 @@ endmodule: mult_dp
    
    
    
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe

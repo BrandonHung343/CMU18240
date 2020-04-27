@@ -7,13 +7,16 @@ module lab3_testCoin ();
    logic [2:0] Coin;
    logic [1:0] PentLeft, TriLeft, CircLeft;
 
-   CalcCoin c1 (.FirstChange, .Pentagons, .Triangles, .Circles, .CoughUpMore, .FirstCoin(Coin),
+   CalcCoin c1 (.FirstChange, .Pentagons, .Triangles, .Circles, 
+                .CoughUpMore, .FirstCoin(Coin),
                 .PentLeft, .TriLeft, .CircLeft);
 
    initial begin
    $monitor(,, "FirstChange = %d, Pentagon = %d, Triangles = %d, Circles = %d,\
-                CoughUpMore = %b, Coin = %d, PentLeft = %d, TriLeft = %d, CircLeft = %d", 
-                FirstChange, Pentagons, Triangles, Circles, CoughUpMore, Coin, PentLeft,
+                CoughUpMore = %b, Coin = %d, PentLeft = %d, TriLeft = %d, / 
+                CircLeft = %d", 
+                FirstChange, Pentagons, Triangles, Circles, 
+                CoughUpMore, Coin, PentLeft,
                 TriLeft, CircLeft);
    #1 CoughUpMore = 0;
    #5 FirstChange = 7;

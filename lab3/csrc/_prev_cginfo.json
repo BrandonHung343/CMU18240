@@ -1,63 +1,59 @@
 {
-    "MlibObjs": {},
-    "stat": {
-        "nMops": 0
+    "SIMBData": {
+        "bytes": 60307,
+        "out": "amcQwB.o"
     },
+    "MlibObjs": {},
+    "LVLData": [
+        "SIM"
+    ],
     "PrevCompiledModules": {
-        "test_change": {
-            "wse6d_d": {
-                "out": "wse6d_d.o",
-                "mod": "test_change",
-                "bytes": 20279,
-                "mode": 4,
-                "archive": "archive.22/_prev_archive_1.a"
-            }
-        },
         "CalcCoin": {
             "QYLay_d": {
                 "out": "QYLay_d.o",
+                "bytes": 11907,
                 "mod": "CalcCoin",
-                "bytes": 11967,
                 "mode": 4,
-                "archive": "archive.22/_prev_archive_1.a"
+                "archive": "archive.33/_24060_archive_1.a"
+            }
+        },
+        "test_change": {
+            "wse6d_d": {
+                "out": "wse6d_d.o",
+                "bytes": 19707,
+                "mod": "test_change",
+                "mode": 4,
+                "archive": "archive.33/_24060_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
                 "out": "reYIK_d.o",
-                "mod": "std",
                 "bytes": 29004,
+                "mod": "std",
                 "mode": 4,
-                "archive": "archive.22/_prev_archive_1.a"
+                "archive": "archive.33/_prev_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
                 "out": "amcQw_d.o",
-                "mod": "...MASTER...",
                 "bytes": 7336,
+                "mod": "...MASTER...",
                 "mode": 4,
-                "archive": "archive.22/_9318_archive_1.a"
+                "archive": "archive.33/_24060_archive_1.a"
             }
         }
     },
-    "CompileStrategy": "fullobj",
-    "CompileProcesses": [
-        "cgproc.9318.json"
-    ],
-    "SIMBData": {
-        "bytes": 60034,
-        "out": "amcQwB.o"
-    },
     "NameTable": {
-        "CalcCoin": [
-            "CalcCoin",
-            "QYLay",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
+            "module"
+        ],
+        "CalcCoin": [
+            "CalcCoin",
+            "QYLay",
             "module"
         ],
         "test_change": [
@@ -71,22 +67,28 @@
             "module"
         ]
     },
+    "CompileProcesses": [
+        "cgproc.24060.json"
+    ],
+    "CompileStrategy": "fullobj",
     "CurCompileUdps": {},
-    "LVLData": [
-        "SIM"
+    "CurCompileModules": [
+        "...MASTER...",
+        "test_change",
+        "CalcCoin"
     ],
     "PEModules": [],
-    "CurCompileModules": [
-        "...MASTER..."
-    ],
     "Misc": {
-        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab3",
-        "default_output_dir": "csrc",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/csrc",
-        "csrc": "csrc",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/simv.daidir",
         "daidir": "simv.daidir",
-        "archive_dir": "archive.22"
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/lab3",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/lab3/simv.daidir",
+        "archive_dir": "archive.33"
+    },
+    "stat": {
+        "nMops": 1441
     },
     "CompileStatus": "Successful"
 }

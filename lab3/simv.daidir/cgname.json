@@ -1,22 +1,22 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
         "module"
     ],
-    "CalcCoin": [
-        "CalcCoin",
-        "QYLay",
-        "module"
-    ],
     "test_change": [
         "test_change",
         "wse6d",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "CalcCoin": [
+        "CalcCoin",
+        "QYLay",
         "module"
     ]
 }

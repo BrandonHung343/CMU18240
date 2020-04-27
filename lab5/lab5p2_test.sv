@@ -33,9 +33,9 @@ module lab5p2_test ();
   
   initial begin
     reset_N = 0;
-    dna_start = 5;
-    pattern_start = 104;
-    dna_length = 45;
+    dna_start = 0;
+    pattern_start = 189;
+    dna_length = 20;
     ready = 0;
     @(posedge clock);
     reset_N = 1;

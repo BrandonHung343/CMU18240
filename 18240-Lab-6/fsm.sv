@@ -18,10 +18,17 @@ module fsm
                    else 
                      nextState =  fin;
                  end
+<<<<<<< HEAD
        fin     : nextState = init;
      endcase
      
    always_ff @(posedge clk, negedge reset_L)
+=======
+       fin     : nextState = start;
+     endcase
+     
+   always_ff @(posedge clock, negedge reset_L)
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
     if (~reset_L)
       state <= init;
     else
@@ -55,11 +62,18 @@ module fsm
                        if (lsb1)
                          addA = 1;
                      end                      
+<<<<<<< HEAD
                 end
        fin     : begin 
                    done = 1;
                    flipEnd = (flipA ^ flipB);
                  end
+=======
+                   else if (doneAdd & (flipA ^ flipB))
+                     flipEnd = 1;
+                 end
+       fin     : done = 1;
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe
      endcase
    end
    
@@ -74,4 +88,8 @@ endmodule: fsm
                      
    
                      
+<<<<<<< HEAD
    
+=======
+   
+>>>>>>> 5be47a890d8ba216ef5136bcbcd8a7163ff006fe

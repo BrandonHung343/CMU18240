@@ -1,0 +1,47 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "ShiftRegister": {},
+        "std": {},
+        "Adder": {},
+        "Multiplexer": {},
+        "Decoder": {},
+        "lab5p3_test": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "BarrelShiftRegister": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.175/_33958_archive_1.a",
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 9100,
+            "mode": 4
+        },
+        "ksjpp_d": {
+            "archive": "archive.175/_33958_archive_1.a",
+            "mod": "lab5p3_test",
+            "out": "ksjpp_d.o",
+            "bytes": 66700,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9100
+                ],
+                [
+                    "ksjpp_d.o",
+                    66700
+                ]
+            ],
+            "archive": "archive.175/_33958_archive_1.a",
+            "size": 75800
+        }
+    ]
+}

@@ -3,7 +3,7 @@ rc file Version 1.0
 [Design]
 COMPILE_PATH=/afs/ece.cmu.edu/usr/bhung/Private/hw7
 SystemC=FALSE
-UUM=FALSE
+UUM=TRUE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
-TOP=MagComp_test Multiplexer_test Mux2to1_test Decoder_test Adder_test Register_test 
+TOP=Mux2to1_test 

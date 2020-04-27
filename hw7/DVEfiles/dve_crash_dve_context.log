@@ -1,0 +1,66 @@
+=======================DVE Context and Call Stack=========================
+Command line: /usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 111790" -toolin /tmp/vcs_20200316234108_111789_bhung..stdin -toolout /tmp/vcs_20200316234108_111789_bhung..stdout
+
+--- Stack trace follows:
+[Thread debugging using libthread_db enabled]
+[New Thread 0x7fd996e5a700 (LWP 112042)]
+[New Thread 0x7fd99765b700 (LWP 112032)]
+
+warning: no loadable sections found in added symbol-file system-supplied DSO at 0x7ffd5ee34000
+0x00007fd9995d94a9 in waitpid () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7fd99765b700 (LWP 112032)):
+#0  0x00007fd99b1f9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fd99a44e870 in ?? () from /lib64/libX11.so.6
+#2  0x00007fd99a44ed69 in ?? () from /lib64/libX11.so.6
+#3  0x00007fd99a4440ba in XFreeCursor () from /lib64/libX11.so.6
+#4  0x00000000028cee67 in QCursorData::~QCursorData() ()
+#5  0x00000000028cf37e in QCursor::~QCursor() ()
+#6  0x00000000028cf3bc in ?? ()
+#7  0x00007fd99954dcd9 in __run_exit_handlers () from /lib64/libc.so.6
+#8  0x00007fd99954dd27 in exit () from /lib64/libc.so.6
+#9  0x00000000028b97fc in ?? ()
+#10 0x00007fd99a4632be in _XIOError () from /lib64/libX11.so.6
+#11 0x00007fd99a460c1d in _XEventsQueued () from /lib64/libX11.so.6
+#12 0x00007fd99a43d1f4 in XCheckTypedEvent () from /lib64/libX11.so.6
+#13 0x00000000011125d4 in ag::dveXThread::run() ()
+#14 0x000000000290c3ba in QThreadInstance::start(void*) ()
+#15 0x00007fd99b1f5ea5 in start_thread () from /lib64/libpthread.so.0
+#16 0x00007fd9996128cd in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7fd996e5a700 (LWP 112042)):
+#0  0x00007fd9996039ad in read () from /lib64/libc.so.6
+#1  0x00007fd99958fcb4 in __GI__IO_file_underflow () from /lib64/libc.so.6
+#2  0x00007fd999590e82 in __GI__IO_default_uflow () from /lib64/libc.so.6
+#3  0x00007fd999583c34 in __GI__IO_getline_info () from /lib64/libc.so.6
+#4  0x00007fd999582a36 in fgets () from /lib64/libc.so.6
+#5  0x00000000012268df in ag::dveSmlSocket::run() ()
+#6  0x000000000290c3ba in QThreadInstance::start(void*) ()
+#7  0x00007fd99b1f5ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007fd9996128cd in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7fd99cdd6840 (LWP 111805)):
+#0  0x00007fd9995d94a9 in waitpid () from /lib64/libc.so.6
+#1  0x00007fd999556f52 in do_system () from /lib64/libc.so.6
+#2  0x00007fd999557301 in system () from /lib64/libc.so.6
+#3  0x00007fd99c5c5bb5 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+#4  0x00007fd99c5c617b in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e81c34e9ac4c8988ef4a6e067b3aa9271e9f15440f9e8f69ebc77e2fd65860faa () from /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+#5  0x00007fd99c5c74a6 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+#6  0x00007fd99c5bf12d in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
+#7  0x0000000002007f89 in ag::logErrorMessage(ag::errorType, QString const&, bool) ()
+#8  0x0000000002008867 in ?? ()
+#9  0x00007fd99954dcb9 in __run_exit_handlers () from /lib64/libc.so.6
+#10 0x00007fd99954dd27 in exit () from /lib64/libc.so.6
+#11 0x00000000028b97fc in ?? ()
+#12 0x00007fd99a4632be in _XIOError () from /lib64/libX11.so.6
+#13 0x00007fd99a460c1d in _XEventsQueued () from /lib64/libX11.so.6
+#14 0x00007fd99a4526dd in XPending () from /lib64/libX11.so.6
+#15 0x00000000028d556c in QEventLoop::processEvents(unsigned int) ()
+#16 0x0000000001157855 in ag::ovaEventLoop::processEvents(unsigned int) ()
+#17 0x0000000002922dc9 in QEventLoop::enterLoop() ()
+#18 0x0000000002922d4a in QEventLoop::exec() ()
+#19 0x000000000115718b in run_cci_event_loop ()
+#20 0x000000000111370f in ag::ovaAppInst::enterEventLoop(int, char**) ()
+#21 0x0000000000e21821 in main ()
+No context available
+==========================================================================

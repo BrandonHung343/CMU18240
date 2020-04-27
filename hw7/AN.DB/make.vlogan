@@ -7,8 +7,8 @@ all :		_VCSgd_9Lhfed_1.db \
 
 
 
-_VCSgd_9Lhfed_1.db :	library.sv 
-		${VLOGAN}  ${VLOGAN_OPT} library.sv
+_VCSgd_9Lhfed_1.db :	hw7prob3.sv 
+		${VLOGAN}  ${VLOGAN_OPT} hw7prob3.sv
 
 
 _VCSgd_nBImW_1.db :	library_tests.sv 
