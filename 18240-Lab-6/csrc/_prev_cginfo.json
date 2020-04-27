@@ -1,0 +1,163 @@
+{
+    "CurCompileUdps": {},
+    "MlibObjs": {},
+    "stat": {
+        "nMops": 1727
+    },
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6/csrc",
+        "archive_dir": "archive.25",
+        "default_output_dir": "csrc",
+        "daidir": "simv.daidir",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6/simv.daidir"
+    },
+    "PrevCompiledModules": {
+        "Multiplexer": {
+            "UxyT3_d": {
+                "out": "UxyT3_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7812,
+                "mod": "Multiplexer",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.25/_199619_archive_1.a",
+                "out": "amcQw_d.o",
+                "bytes": 9263,
+                "mod": "...MASTER...",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4
+            }
+        },
+        "MagComp": {
+            "vaLRj_d": {
+                "out": "vaLRj_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 8427,
+                "mod": "MagComp",
+                "mode": 4
+            }
+        },
+        "BarrelShiftRegister": {
+            "ts568_d": {
+                "out": "ts568_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7571,
+                "mod": "BarrelShiftRegister",
+                "mode": 4
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "out": "t8TcA_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7919,
+                "mod": "Decoder",
+                "mode": 4
+            }
+        },
+        "Memory": {
+            "f0K8C_d": {
+                "out": "f0K8C_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 9389,
+                "mod": "Memory",
+                "mode": 4
+            }
+        },
+        "Counter": {
+            "Nsh6f_d": {
+                "out": "Nsh6f_d.o",
+                "archive": "archive.25/_prev_archive_1.a",
+                "bytes": 7682,
+                "mod": "Counter",
+                "mode": 4
+            }
+        },
+        "mult_test": {
+            "f0cTx_d": {
+                "archive": "archive.25/_199619_archive_1.a",
+                "out": "f0cTx_d.o",
+                "bytes": 32387,
+                "mod": "mult_test",
+                "mode": 4
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "MagComp": [
+            "MagComp",
+            "vaLRj",
+            "module"
+        ],
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
+            "module"
+        ],
+        "Counter": [
+            "Counter",
+            "Nsh6f",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
+            "module"
+        ],
+        "Memory": [
+            "Memory",
+            "f0K8C",
+            "module"
+        ],
+        "mult_test": [
+            "mult_test",
+            "f0cTx",
+            "module"
+        ]
+    },
+    "SIMBData": {
+        "bytes": 61550,
+        "out": "amcQwB.o"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "mult_test"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.199619.json"
+    ],
+    "CompileStatus": "Successful"
+}

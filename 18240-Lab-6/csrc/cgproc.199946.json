@@ -1,0 +1,48 @@
+{
+    "Modules": {
+        "mult_test": {
+            "Compiled": "Yes",
+            "Compiled Times": 27
+        },
+        "...MASTER...": {},
+        "std": {},
+        "Multiplexer": {},
+        "MagComp": {},
+        "Decoder": {},
+        "Counter": {},
+        "BarrelShiftRegister": {},
+        "Memory": {}
+    },
+    "CompUnits": {
+        "f0cTx_d": {
+            "bytes": 32387,
+            "out": "f0cTx_d.o",
+            "mod": "mult_test",
+            "mode": 4,
+            "archive": "archive.26/_199946_archive_1.a"
+        },
+        "amcQw_d": {
+            "bytes": 9263,
+            "out": "amcQw_d.o",
+            "mod": "...MASTER...",
+            "mode": 4,
+            "archive": "archive.26/_199946_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.26/_199946_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9263
+                ],
+                [
+                    "f0cTx_d.o",
+                    32387
+                ]
+            ],
+            "size": 41650
+        }
+    ]
+}

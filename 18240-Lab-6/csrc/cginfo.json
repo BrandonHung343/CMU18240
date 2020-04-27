@@ -1,0 +1,163 @@
+{
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.199946.json"
+    ],
+    "MlibObjs": {},
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
+            "module"
+        ],
+        "MagComp": [
+            "MagComp",
+            "vaLRj",
+            "module"
+        ],
+        "Decoder": [
+            "Decoder",
+            "t8TcA",
+            "module"
+        ],
+        "Counter": [
+            "Counter",
+            "Nsh6f",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
+            "module"
+        ],
+        "Memory": [
+            "Memory",
+            "f0K8C",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "mult_test": [
+            "mult_test",
+            "f0cTx",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "archive_dir": "archive.26",
+        "cwd": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6/csrc",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/bhung/Private/18240-Lab-6/simv.daidir",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "PrevCompiledModules": {
+        "Multiplexer": {
+            "UxyT3_d": {
+                "out": "UxyT3_d.o",
+                "mod": "Multiplexer",
+                "bytes": 7812,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "out": "reYIK_d.o",
+                "mod": "std",
+                "bytes": 29004,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "MagComp": {
+            "vaLRj_d": {
+                "out": "vaLRj_d.o",
+                "mod": "MagComp",
+                "bytes": 8427,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "BarrelShiftRegister": {
+            "ts568_d": {
+                "out": "ts568_d.o",
+                "mod": "BarrelShiftRegister",
+                "bytes": 7571,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "Memory": {
+            "f0K8C_d": {
+                "out": "f0K8C_d.o",
+                "mod": "Memory",
+                "bytes": 9389,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "out": "t8TcA_d.o",
+                "mod": "Decoder",
+                "bytes": 7919,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "Counter": {
+            "Nsh6f_d": {
+                "out": "Nsh6f_d.o",
+                "mod": "Counter",
+                "bytes": 7682,
+                "mode": 4,
+                "archive": "archive.26/_prev_archive_1.a"
+            }
+        },
+        "mult_test": {
+            "f0cTx_d": {
+                "out": "f0cTx_d.o",
+                "mod": "mult_test",
+                "bytes": 32387,
+                "mode": 4,
+                "archive": "archive.26/_199946_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "amcQw_d.o",
+                "mod": "...MASTER...",
+                "bytes": 9263,
+                "mode": 4,
+                "archive": "archive.26/_199946_archive_1.a"
+            }
+        }
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "mult_test"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "bytes": 61550,
+        "out": "amcQwB.o"
+    },
+    "stat": {
+        "nMops": 1727
+    }
+}
