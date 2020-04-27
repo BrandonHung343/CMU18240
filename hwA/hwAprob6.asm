@@ -16,7 +16,7 @@ init   MV R7, R0 ; 0 out error counter
 
 wait   LI R2, $3 ; load enable and read bit
        SW R0, R2, $0012 ; set enable + read bit
-       SLTI R0, R6, $16 ; check if index has hit 8 yet
+       SLTI R0, R6, $10 ; check if index has hit 8 yet
        BRN skip 
        MV R6, R0 ; 0 out index counter
 skip   SLTI R0, R7, $3 ; check for 3 errors in parity bit in a row
@@ -45,11 +45,14 @@ loop   LI R1, $1 ; load 1 into R1 to AND with 2
        BRA wait
 good   LW R2, R0, $0020 ; get good copy of payload back
        SW R6, R2, Y ; store in array at offset
+       ADDI R6, R6, $2 ; add 2 to r6 offset
+       MV R7, R0 ; re-zero r7
        LI R2, $1 ; set ack = 00, enable in $0012
        SW R0, R2, $0012 ;
        BRA wait
 bad    LI R2, $FF ; got 3 errors, so we load FF into R2
        SW R6, R2, Y ; put FF in the array
+       ADDI R6, R6, $2 ; add 2 to r6 offset
        LI R2, $9 ; set ack = 10, enable
        SW R0, R2, $0012 ; 
        MV R7, R0 ; reset the error counter
